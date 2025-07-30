@@ -16,10 +16,8 @@ class STARLearningSystem {
     }
 
     async init() {
-        // Hide loading screen after 2 seconds
-        setTimeout(() => {
-            document.getElementById('loading-screen').style.display = 'none';
-        }, 2000);
+        // Hide loading screen immediately
+        document.getElementById('loading-screen').style.display = 'none';
 
         // Check if user is already logged in
         this.checkExistingUser();
@@ -33,6 +31,7 @@ class STARLearningSystem {
 
     checkExistingUser() {
         const savedUser = localStorage.getItem('starUser');
+        console.log('Checking user:', savedUser);
         if (savedUser) {
             this.currentUser = JSON.parse(savedUser);
             if (this.currentUser.registrationComplete) {
@@ -40,6 +39,8 @@ class STARLearningSystem {
             } else {
                 this.showRegistration();
             }
+        } else {
+            this.showLogin(); // Ensure login is shown if no user
         }
     }
 
@@ -116,13 +117,6 @@ class STARLearningSystem {
         localStorage.setItem('starUsers', JSON.stringify(existingUsers));
         localStorage.setItem('starUser', JSON.stringify(formData));
 
-        // Save to Google Sheets
-        try {
-            await window.GoogleSheetsAPI.saveUserData(formData);
-        } catch (error) {
-            console.error('Failed to save to Google Sheets:', error);
-        }
-
         this.currentUser = formData;
         this.showLibrary();
     }
@@ -175,9 +169,7 @@ class STARLearningSystem {
     }
 
     async selectBook(bookId, dataFile) {
-        // Load book data dynamically
         try {
-            // For demo purposes, we'll use the Mindset book data
             this.currentBook = window.BookData_Mindset;
             this.currentSlide = 0;
             this.showReader();
@@ -300,7 +292,6 @@ class STARLearningSystem {
         
         slideCounter.textContent = `${this.currentSlide + 1} / ${this.currentBook.slides.length}`;
         
-        // Add animation
         slideContainer.classList.add('slide-in-right');
         setTimeout(() => {
             slideContainer.classList.remove('slide-in-right');
@@ -308,7 +299,6 @@ class STARLearningSystem {
     }
 
     initializeQuiz() {
-        // Shuffle questions and select 20
         const shuffledQuestions = [...this.currentBook.quizQuestions].sort(() => Math.random() - 0.5);
         this.quizSession = {
             ...window.LMSData.quizSessionTemplate,
@@ -341,7 +331,6 @@ class STARLearningSystem {
         
         questionCounter.textContent = `${this.currentQuestion + 1} / ${this.quizSession.questions.length}`;
         
-        // Update navigation buttons
         const prevBtn = document.getElementById('prev-question-btn');
         const nextBtn = document.getElementById('next-question-btn');
         const finishBtn = document.getElementById('finish-quiz-btn');
@@ -356,7 +345,6 @@ class STARLearningSystem {
             finishBtn.style.display = 'none';
         }
         
-        // Restore previous answer if exists
         if (this.userAnswers[this.currentQuestion]) {
             const selectedOption = document.querySelector(`.option:nth-child(${this.getOptionIndex(this.userAnswers[this.currentQuestion])})`);
             if (selectedOption) {
@@ -366,18 +354,14 @@ class STARLearningSystem {
     }
 
     selectAnswer(answer) {
-        // Remove previous selection
         document.querySelectorAll('.option').forEach(option => {
             option.classList.remove('selected');
         });
         
-        // Add selection to clicked option
         event.target.classList.add('selected');
         
-        // Save answer
         this.userAnswers[this.currentQuestion] = answer;
         
-        // Update score display
         this.updateScoreDisplay();
     }
 
@@ -414,7 +398,6 @@ class STARLearningSystem {
         const quizTime = this.stopQuizTimer();
         let correctAnswers = 0;
         
-        // Calculate score
         this.userAnswers.forEach((answer, index) => {
             if (answer && answer === this.quizSession.questions[index].correctAnswer) {
                 correctAnswers++;
@@ -424,7 +407,6 @@ class STARLearningSystem {
         const score = correctAnswers * 5;
         const gradeInfo = this.calculateGrade(score);
         
-        // Complete quiz session
         this.quizSession.answers = this.userAnswers;
         this.quizSession.score = score;
         this.quizSession.grade = gradeInfo.grade;
@@ -432,14 +414,12 @@ class STARLearningSystem {
         this.quizSession.endTime = new Date();
         this.quizSession.encouragementMessage = gradeInfo.message;
         
-        // Save results to Google Sheets
         try {
             await window.GoogleSheetsAPI.saveQuizResults(this.quizSession);
         } catch (error) {
             console.error('Failed to save quiz results:', error);
         }
         
-        // Save to localStorage
         const quizHistory = JSON.parse(localStorage.getItem('starQuizHistory') || '[]');
         quizHistory.push(this.quizSession);
         localStorage.setItem('starQuizHistory', JSON.stringify(quizHistory));
@@ -539,7 +519,6 @@ class STARLearningSystem {
         const { jsPDF } = window.jspdf;
         const doc = new jsPDF();
         
-        // Add certificate content
         doc.setFontSize(20);
         doc.text('STAR Learning Certificate', 105, 30, { align: 'center' });
         
@@ -582,11 +561,9 @@ class STARLearningSystem {
         const splitMessage = doc.splitTextToSize(message, 170);
         doc.text(splitMessage, leftMargin, yPosition);
         
-        // Save the PDF
         doc.save(`STAR_Certificate_${userInfo.fullName.replace(/\s+/g, '_')}_${new Date().toISOString().split('T')[0]}.pdf`);
     }
 
-    // Navigation methods
     goToFirstSlide() {
         this.currentSlide = 0;
         this.displaySlide();
@@ -632,20 +609,17 @@ class STARLearningSystem {
     retakeQuiz() {
         const useNewQuestions = confirm('Would you like to use a new set of questions for the retake?');
         if (useNewQuestions) {
-            // Use extended question bank for new quiz
             this.generateNewQuiz();
         }
         this.showQuiz();
     }
 
     generateNewQuiz() {
-        // Combine regular questions with extended bank
         const allQuestions = [
             ...this.currentBook.quizQuestions,
             ...this.currentBook.extendedQuestionBank
         ];
         
-        // Shuffle and select 20 new questions
         const shuffledQuestions = [...allQuestions].sort(() => Math.random() - 0.5);
         this.quizSession.questions = shuffledQuestions.slice(0, 20);
         this.currentQuestion = 0;
@@ -653,7 +627,6 @@ class STARLearningSystem {
     }
 
     goHome() {
-        // Stop any running timers
         if (this.readingTimer) clearInterval(this.readingTimer);
         if (this.quizTimer) clearInterval(this.quizTimer);
         
