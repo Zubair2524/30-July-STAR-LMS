@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STAR - Shaigan's Books Learning Management Portal</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div id="loading-screen" class="loading-screen">
+        <div class="loader">
+            <div class="book">
+                <div class="page"></div>
+                <div class="page"></div>
+                <div class="page"></div>
+            </div>
+        </div>
+        <h2>Loading STAR Portal...</h2>
+    </div>
+
+    <!-- Login Page -->
+    <div id="login-page" class="page active">
+        <div class="container">
+            <div class="glass-card login-card">
+                <div class="logo-section">
+                    <div class="logo-placeholder">
+                        <img src="aaa1.png" alt="STAR Logo" onerror="this.style.display='none'">
+                    </div>
+                    <h1 class="main-title">STAR</h1>
+                    <p class="subtitle">Shaigan's Books Learning Management Portal</p>
+                </div>
+                <form class="login-form">
+                    <div class="input-group">
+                        <input type="text" id="login-username" placeholder="Username" required>
+                        <span class="input-highlight"></span>
+                    </div>
+                    <div class="input-group">
+                        <input type="password" id="login-password" placeholder="Password" required>
+                        <span class="input-highlight"></span>
+                    </div>
+                    <button type="submit" class="rainbow-btn login-btn">
+                        <span>Enter Portal</span>
+                    </button>
+                </form>
+                <p class="register-link">New user? <span onclick="showRegistration()">Register here</span></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Registration Page -->
+    <div id="registration-page" class="page">
+        <div class="container">
+            <div class="glass-card registration-card">
+                <h2>Join STAR Learning Portal</h2>
+                <form class="registration-form">
+                    <div class="form-row">
+                        <div class="input-group">
+                            <input type="text" id="fullName" placeholder="Full Name" required>
+                            <span class="input-highlight"></span>
+                        </div>
+                        <div class="input-group">
+                            <input type="text" id="designation" placeholder="Designation" required>
+                            <span class="input-highlight"></span>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="input-group">
+                            <input type="text" id="teamDepartment" placeholder="Team / Department" required>
+                            <span class="input-highlight"></span>
+                        </div>
+                        <div class="input-group">
+                            <input type="text" id="baseCity" placeholder="Base City" required>
+                            <span class="input-highlight"></span>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="input-group">
+                            <input type="date" id="registrationDate" required>
+                            <span class="input-highlight"></span>
+                        </div>
+                        <div class="input-group">
+                            <input type="email" id="email" placeholder="Email" required>
+                            <span class="input-highlight"></span>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="input-group">
+                            <input type="tel" id="cellNumber" placeholder="Cell Number" required>
+                            <span class="input-highlight"></span>
+                        </div>
+                        <div class="input-group">
+                            <input type="text" id="reg-username" placeholder="Username" required>
+                            <span class="input-highlight"></span>
+                        </div>
+                    </div>
+                    <div class="input-group">
+                        <input type="password" id="reg-password" placeholder="Password" required>
+                        <span class="input-highlight"></span>
+                    </div>
+                    <button type="submit" class="rainbow-btn">
+                        <span>Complete Registration</span>
+                    </button>
+                </form>
+                <p class="back-link" onclick="showLogin()">← Back to Login</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Library Page -->
+    <div id="library-page" class="page">
+        <header class="library-header">
+            <div class="header-content">
+                <div class="logo-section">
+                    <img src="aaa1.png" alt="STAR Logo" onerror="this.style.display='none'">
+                    <h1>STAR Library</h1>
+                </div>
+                <div class="user-info">
+                    <span id="user-greeting">Welcome, <span id="user-name"></span></span>
+                    <button class="logout-btn" onclick="logout()">Logout</button>
+                </div>
+            </div>
+            <div class="search-section">
+                <div class="search-bar">
+                    <input type="text" id="search-input" placeholder="Search books...">
+                    <button class="search-btn">🔍</button>
+                </div>
+            </div>
+        </header>
+
+        <main class="library-content">
+            <div class="book-sections" id="book-sections">
+                <!-- Book sections will be populated dynamically -->
+            </div>
+        </main>
+    </div>
+
+    <!-- Book Reader Page -->
+    <div id="reader-page" class="page">
+        <header class="reader-header">
+            <div class="header-content">
+                <h2 id="book-title">Book Title</h2>
+                <div class="reading-info">
+                    <span id="reading-timer">00:00</span>
+                    <span id="slide-counter">1 / 10</span>
+                </div>
+            </div>
+        </header>
+        
+        <main class="reader-content">
+            <div class="slide-container">
+                <div id="current-slide" class="slide">
+                    <!-- Slide content will be populated dynamically -->
+                </div>
+            </div>
+            
+            <div class="reader-controls">
+                <button class="control-btn" onclick="goToFirstSlide()">⏮️</button>
+                <button class="control-btn" onclick="previousSlide()">⏪</button>
+                <button class="control-btn home-btn" onclick="goHome()">🏠</button>
+                <button class="control-btn" onclick="nextSlide()">⏩</button>
+                <button class="control-btn" onclick="goToLastSlide()">⏭️</button>
+            </div>
+        </main>
+    </div>
+
+    <!-- Quiz Page -->
+    <div id="quiz-page" class="page">
+        <header class="quiz-header">
+            <div class="header-content">
+                <h2 id="quiz-book-title">Quiz: Book Title</h2>
+                <div class="quiz-info">
+                    <span id="quiz-timer">00:00</span>
+                    <span id="question-counter">1 / 20</span>
+                    <span id="quiz-score">Score: 0/100</span>
+                </div>
+            </div>
+        </header>
+        
+        <main class="quiz-content">
+            <div class="question-container">
+                <div id="current-question" class="question">
+                    <!-- Question content will be populated dynamically -->
+                </div>
+            </div>
+            
+            <div class="quiz-controls">
+                <button id="prev-question-btn" class="control-btn" onclick="previousQuestion()">⏪ Previous</button>
+                <button id="next-question-btn" class="control-btn" onclick="nextQuestion()">Next ⏩</button>
+                <button id="finish-quiz-btn" class="rainbow-btn" onclick="finishQuiz()" style="display: none;">Finish Quiz</button>
+            </div>
+        </main>
+    </div>
+
+    <!-- Score Card Page -->
+    <div id="scorecard-page" class="page">
+        <div class="container">
+            <div class="glass-card scorecard">
+                <div class="certificate-header">
+                    <img src="aaa1.png" alt="STAR Logo" onerror="this.style.display='none'">
+                    <h1>STAR Learning Certificate</h1>
+                    <p>Shaigan's Books Learning Management Portal</p>
+                </div>
+                
+                <div id="scorecard-content" class="scorecard-content">
+                    <!-- Content will be populated dynamically -->
+                </div>
+                
+                <div class="scorecard-actions">
+                    <button class="rainbow-btn" onclick="downloadPDF()">📄 Download PDF</button>
+                    <button class="control-btn" onclick="showAnswers()">📝 Check Answers</button>
+                    <button class="control-btn" onclick="retakeQuiz()">🔄 New Quiz</button>
+                    <button class="control-btn" onclick="goHome()">🏠 Home</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Answer Review Page -->
+    <div id="answers-page" class="page">
+        <div class="container">
+            <div class="glass-card answers-review">
+                <h2>Answer Review</h2>
+                <div id="answers-content" class="answers-content">
+                    <!-- Content will be populated dynamically -->
+                </div>
+                <button class="control-btn" onclick="backToScorecard()">← Back to Score Card</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="data.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
