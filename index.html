@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STAR Learning Management System</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Login Page -->
+    <div id="loginPage" class="page active">
+        <div class="background">
+            <div class="stars"></div>
+            <div class="moving-bg"></div>
+        </div>
+        <div class="login-container glass-container">
+            <div class="logo-section">
+                <h1 class="star-text">STAR</h1>
+                <span class="subtitle">Study, Track, Achieve, Repeat</span>
+            </div>
+            <form id="loginForm">
+                <div class="input-group">
+                    <i class="fas fa-user"></i>
+                    <input type="text" id="loginUsername" placeholder="Username" required>
+                </div>
+                <div class="input-group">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" id="loginPassword" placeholder="Password" required>
+                </div>
+                <button type="submit" class="rainbow-btn">Login</button>
+                <p class="subtitle" id="loginError" style="color: #f44336; display: none;"></p>
+                <p class="subtitle">Don't have an account? <a href="#" id="showRegister">Register</a></p>
+            </form>
+        </div>
+    </div>
+
+    <!-- Registration Page -->
+    <div id="registerPage" class="page">
+        <div class="background">
+            <div class="stars"></div>
+            <div class="moving-bg"></div>
+        </div>
+        <div class="registration-container glass-container">
+            <div class="logo-section">
+                <h1 class="star-text">STAR</h1>
+                <span class="subtitle">Study, Track, Achieve, Repeat</span>
+            </div>
+            <form id="registerForm" class="registration-form">
+                <div class="form-row">
+                    <div class="input-group">
+                        <i class="fas fa-user"></i>
+                        <input type="text" id="regFirstName" placeholder="First Name" required>
+                    </div>
+                    <div class="input-group">
+                        <i class="fas fa-user"></i>
+                        <input type="text" id="regLastName" placeholder="Last Name" required>
+                    </div>
+                </div>
+                <div class="input-group">
+                    <i class="fas fa-user"></i>
+                    <input type="text" id="regUsername" placeholder="Username" required>
+                </div>
+                <div class="input-group">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" id="regPassword" placeholder="Password" required>
+                </div>
+                <button type="submit" class="rainbow-btn">Register</button>
+                <p class="subtitle" id="registerError" style="color: #f44336; display: none;"></p>
+                <p class="subtitle">Already have an account? <a href="#" id="showLogin">Login</a></p>
+            </form>
+        </div>
+    </div>
+
+    <!-- Library Page -->
+    <div id="libraryPage" class="page">
+        <div class="background">
+            <div class="stars"></div>
+            <div class="moving-bg"></div>
+        </div>
+        <div class="glass-header">
+            <div class="header-content">
+                <div class="logo">STAR</div>
+                <div class="search-bar">
+                    <i class="fas fa-search"></i>
+                    <input type="text" id="searchInput" placeholder="Search books...">
+                </div>
+                <div class="user-info">
+                    <span id="userNameDisplay"></span>
+                    <button class="rainbow-btn small" id="logoutBtn">Logout</button>
+                </div>
+            </div>
+        </div>
+        <div class="library-content">
+            <div id="bookSections"></div>
+        </div>
+    </div>
+
+    <!-- Reading Page -->
+    <div id="readingPage" class="page">
+        <div class="background">
+            <div class="stars"></div>
+            <div class="moving-bg"></div>
+        </div>
+        <div class="reading-container">
+            <div class="reading-header">
+                <div class="reading-nav">
+                    <button class="nav-btn" id="backToLibrary"><i class="fas fa-arrow-left"></i> Library</button>
+                    <h2 id="bookTitle"></h2>
+                    <div class="timer"><i class="fas fa-clock"></i> <span id="timer">00:00</span></div>
+                </div>
+            </div>
+            <div class="slide-container">
+                <div class="slide-content fade-in">
+                    <h2 id="slideTitle"></h2>
+                    <div id="slideContent"></div>
+                </div>
+                <div class="slide-navigation">
+                    <button class="nav-btn" id="prevSlide"><i class="fas fa-chevron-left"></i> Previous</button>
+                    <span class="slide-counter" id="slideCounter">Slide 1 of 13</span>
+                    <button class="nav-btn" id="nextSlide">Next <i class="fas fa-chevron-right"></i></button>
+                    <div class="quiz-start-container">
+                        <button class="rainbow-btn" id="startQuizBtn">Start Quiz</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Quiz Page -->
+    <div id="quizPage" class="page">
+        <div class="background">
+            <div class="stars"></div>
+            <div class="moving-bg"></div>
+        </div>
+        <div class="quiz-container">
+            <div class="quiz-header">
+                <h2 id="quizBookTitle"></h2>
+                <div class="quiz-info">
+                    <span class="question-counter" id="questionCounter">Question 1 of 20</span>
+                    <div class="timer"><i class="fas fa-clock"></i> <span id="quizTimer">00:00</span></div>
+                </div>
+            </div>
+            <div class="quiz-content">
+                <div class="question-container fade-in">
+                    <h3 id="questionText"></h3>
+                    <div class="options-container" id="optionsContainer"></div>
+                </div>
+                <div class="quiz-navigation">
+                    <button class="rainbow-btn" id="nextQuestionBtn" disabled>Next Question</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Results Page -->
+    <div id="resultsPage" class="page">
+        <div class="background">
+            <div class="stars"></div>
+            <div class="moving-bg"></div>
+        </div>
+        <div class="results-container">
+            <div class="certificate-container">
+                <div class="certificate-header">
+                    <h1>Certificate of Completion</h1>
+                    <h2 id="certificateBookTitle"></h2>
+                </div>
+                <div class="certificate-content">
+                    <p class="certificate-text">This certifies that</p>
+                    <p class="student-name" id="certificateStudentName"></p>
+                    <p class="certificate-text">has successfully completed the course for</p>
+                    <p class="book-name" id="certificateBookName"></p>
+                </div>
+                <div class="results-details">
+                    <div class="result-item">
+                        <span class="label">Score:</span>
+                        <span class="value" id="finalScore"></span>
+                    </div>
+                    <div class="result-item">
+                        <span class="label">Percentage:</span>
+                        <span class="value" id="finalPercentage"></span>
+                    </div>
+                    <div class="result-item">
+                        <span class="label">Grade:</span>
+                        <span class="value grade" id="finalGrade"></span>
+                    </div>
+                    <div class="result-item">
+                        <span class="label">Completion Date:</span>
+                        <span class="value" id="completionDate"></span>
+                    </div>
+                </div>
+                <div class="encouragement-message">
+                    <p id="encouragementMessage"></p>
+                </div>
+                <div class="user-details">
+                    <div class="detail-row">
+                        <span>Issued by:</span>
+                        <span>STAR Learning Management System</span>
+                    </div>
+                    <div class="detail-row">
+                        <span>Instructor:</span>
+                        <span>Self-Paced Learning</span>
+                    </div>
+                </div>
+                <div class="certificate-actions">
+                    <button class="action-btn" id="reviewAnswersBtn"><i class="fas fa-eye"></i> Review Answers</button>
+                    <button class="action-btn" id="downloadCertificateBtn"><i class="fas fa-download"></i> Download Certificate</button>
+                    <button class="action-btn" id="backToLibraryResults"><i class="fas fa-arrow-left"></i> Back to Library</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Answer Review Page -->
+    <div id="reviewPage" class="page">
+        <div class="background">
+            <div class="stars"></div>
+            <div class="moving-bg"></div>
+        </div>
+        <div class="review-container">
+            <div class="review-header">
+                <h2>Answer Review - <span id="reviewBookTitle"></span></h2>
+                <button class="rainbow-btn small" id="backToResultsBtn"><i class="fas fa-arrow-left"></i> Back to Results</button>
+            </div>
+            <div class="answers-list" id="answersList"></div>
+            <div class="result-summary">
+                <h3>Summary</h3>
+                <p>Score: <span id="reviewScore"></span></p>
+                <p>Percentage: <span id="reviewPercentage"></span></p>
+                <p>Grade: <span id="reviewGrade"></span></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script>
+        // User Management
+        let currentUser = JSON.parse(localStorage.getItem('currentUser')) || null;
+        let currentBook = null;
+        let currentSlide = 0;
+        let currentQuestion = 0;
+        let quizAnswers = [];
+        let quizStartTime = null;
+        let readingStartTime = null;
+        let booksData = {};
+
+        // Page Navigation
+        function showPage(pageId) {
+            document.querySelectorAll('.page').forEach(page => page.classList.remove('active'));
+            document.getElementById(pageId).classList.add('active');
+            if (pageId === 'libraryPage' && currentUser) {
+                document.getElementById('userNameDisplay').textContent = `${currentUser.firstName} ${currentUser.lastName}`;
+            }
+        }
+
+        // Login
+        document.getElementById('loginForm').addEventListener('submit', (e) => {
+            e.preventDefault();
+            const loginError = document.getElementById('loginError');
+            loginError.style.display = 'none';
+            const username = document.getElementById('loginUsername').value.trim();
+            const password = document.getElementById('loginPassword').value.trim();
+            if (!username || !password) {
+                loginError.textContent = 'Please enter both username and password.';
+                loginError.style.display = 'block';
+                return;
+            }
+            try {
+                const users = JSON.parse(localStorage.getItem('users')) || [];
+                console.log('Users in localStorage:', users); // Debugging
+                const user = users.find(u => u.username === username && u.password === password);
+                if (user) {
+                    currentUser = user;
+                    localStorage.setItem('currentUser', JSON.stringify(user));
+                    console.log('Login successful for:', user); // Debugging
+                    showPage('libraryPage');
+                } else {
+                    loginError.textContent = 'Invalid username or password.';
+                    loginError.style.display = 'block';
+                }
+            } catch (error) {
+                console.error('Login error:', error);
+                loginError.textContent = 'An error occurred. Please try again.';
+                loginError.style.display = 'block';
+            }
+        });
+
+        // Registration
+        document.getElementById('registerForm').addEventListener('submit', (e) => {
+            e.preventDefault();
+            const registerError = document.getElementById('registerError');
+            registerError.style.display = 'none';
+            const firstName = document.getElementById('regFirstName').value.trim();
+            const lastName = document.getElementById('regLastName').value.trim();
+            const username = document.getElementById('regUsername').value.trim();
+            const password = document.getElementById('regPassword').value.trim();
+            if (!firstName || !lastName || !username || !password) {
+                registerError.textContent = 'Please fill in all fields.';
+                registerError.style.display = 'block';
+                return;
+            }
+            try {
+                const users = JSON.parse(localStorage.getItem('users')) || [];
+                if (users.some(u => u.username === username)) {
+                    registerError.textContent = 'Username already exists.';
+                    registerError.style.display = 'block';
+                    return;
+                }
+                const newUser = { firstName, lastName, username, password, completedBooks: [] };
+                users.push(newUser);
+                localStorage.setItem('users', JSON.stringify(users));
+                currentUser = newUser;
+                localStorage.setItem('currentUser', JSON.stringify(currentUser));
+                console.log('Registration successful for:', newUser); // Debugging
+                showPage('libraryPage');
+            } catch (error) {
+                console.error('Registration error:', error);
+                registerError.textContent = 'An error occurred. Please try again.';
+                registerError.style.display = 'block';
+            }
+        });
+
+        // Page Toggles
+        document.getElementById('showRegister').addEventListener('click', (e) => {
+            e.preventDefault();
+            showPage('registerPage');
+        });
+        document.getElementById('showLogin').addEventListener('click', (e) => {
+            e.preventDefault();
+            showPage('loginPage');
+        });
+        document.getElementById('logoutBtn').addEventListener('click', () => {
+            currentUser = null;
+            localStorage.removeItem('currentUser');
+            showPage('loginPage');
+        });
+
+        // Load Books
+        async function loadBooks() {
+            const bookSections = document.getElementById('bookSections');
+            bookSections.innerHTML = '';
+            const sections = ['Psychology', 'Business', 'Leadership', 'Productivity', 'Personal Development'];
+            for (let i = 1; i <= 10; i++) {
+                try {
+                    const response = await fetch(`${i}books.json`);
+                    if (!response.ok) continue;
+                    const data = await response.json();
+                    booksData[i] = data;
+                    data.forEach(book => {
+                        if (!sections.includes(book.section)) return;
+                        let section = document.querySelector(`#section-${book.section.replace(/\s+/g, '-')}`);
+                        if (!section) {
+                            section = document.createElement('div');
+                            section.id = `section-${book.section.replace(/\s+/g, '-')}`;
+                            section.className = 'book-section';
+                            section.innerHTML = `<h2 class="section-title">${book.section}</h2><div class="bookshelf"></div>`;
+                            bookSections.appendChild(section);
+                        }
+                        const bookshelf = section.querySelector('.bookshelf');
+                        const bookCard = document.createElement('div');
+                        bookCard.className = 'book-card';
+                        bookCard.innerHTML = `
+                            <img src="${book.thumbnail}" alt="${book.title}" class="book-thumbnail">
+                            <h3>${book.title}</h3>
+                            <p>${book.section}</p>
+                        `;
+                        bookCard.addEventListener('click', () => {
+                            currentBook = book;
+                            currentSlide = 0;
+                            readingStartTime = new Date();
+                            showReadingSlide();
+                            showPage('readingPage');
+                        });
+                        bookshelf.appendChild(bookCard);
+                    });
+                } catch (error) {
+                    console.error(`Error loading ${i}books.json:`, error);
+                }
+            }
+            // Add coming soon section
+            const comingSoon = document.createElement('div');
+            comingSoon.className = 'book-section';
+            comingSoon.innerHTML = `
+                <h2 class="section-title">Coming Soon</h2>
+                <div class="bookshelf">
+                    <div class="book-card coming-soon">
+                        <div class="book-thumbnail"></div>
+                        <h3>More Books</h3>
+                        <p class="coming-soon-text">Stay tuned for new additions!</p>
+                    </div>
+                </div>
+            `;
+            bookSections.appendChild(comingSoon);
+        }
+
+        // Reading Page
+        function showReadingSlide() {
+            if (!currentBook) return;
+            const slide = currentBook.slides[currentSlide];
+            document.getElementById('bookTitle').textContent = currentBook.title;
+            document.getElementById('slideTitle').textContent = slide.title;
+            document.getElementById('slideContent').textContent = slide.content;
+            document.getElementById('slideCounter').textContent = `Slide ${currentSlide + 1} of ${currentBook.slides.length}`;
+            document.getElementById('prevSlide').disabled = currentSlide === 0;
+            document.getElementById('nextSlide').disabled = currentSlide === currentBook.slides.length - 1;
+            document.getElementById('startQuizBtn').style.display = currentSlide === currentBook.slides.length - 1 ? 'block' : 'none';
+            updateTimer();
+        }
+
+        // Timer
+        function updateTimer() {
+            if (!readingStartTime) return;
+            const now = new Date();
+            const diff = Math.floor((now - readingStartTime) / 1000);
+            const minutes = Math.floor(diff / 60).toString().padStart(2, '0');
+            const seconds = (diff % 60).toString().padStart(2, '0');
+            document.getElementById('timer').textContent = `${minutes}:${seconds}`;
+            setTimeout(updateTimer, 1000);
+        }
+
+        document.getElementById('prevSlide').addEventListener('click', () => {
+            if (currentSlide > 0) {
+                currentSlide--;
+                showReadingSlide();
+            }
+        });
+
+        document.getElementById('nextSlide').addEventListener('click', () => {
+            if (currentSlide < currentBook.slides.length - 1) {
+                currentSlide++;
+                showReadingSlide();
+            }
+        });
+
+        document.getElementById('backToLibrary').addEventListener('click', () => showPage('libraryPage'));
+
+        // Quiz Page
+        document.getElementById('startQuizBtn').addEventListener('click', () => {
+            currentQuestion = 0;
+            quizAnswers = [];
+            quizStartTime = new Date();
+            showQuestion();
+            showPage('quizPage');
+        });
+
+        function showQuestion() {
+            if (!currentBook) return;
+            const question = currentBook.quiz[currentQuestion];
+            document.getElementById('quizBookTitle').textContent = currentBook.title;
+            document.getElementById('questionText').textContent = question.question;
+            document.getElementById('questionCounter').textContent = `Question ${currentQuestion + 1} of ${currentBook.quiz.length}`;
+            const optionsContainer = document.getElementById('optionsContainer');
+            optionsContainer.innerHTML = '';
+            question.options.forEach((option, index) => {
+                const btn = document.createElement('button');
+                btn.className = 'option-btn';
+                btn.innerHTML = `
+                    <span class="option-label">${String.fromCharCode(65 + index)}</span>
+                    <span>${option}</span>
+                `;
+                btn.addEventListener('click', () => {
+                    document.querySelectorAll('.option-btn').forEach(b => b.classList.remove('selected'));
+                    btn.classList.add('selected');
+                    quizAnswers[currentQuestion] = index;
+                    document.getElementById('nextQuestionBtn').disabled = false;
+                });
+                optionsContainer.appendChild(btn);
+            });
+            document.getElementById('nextQuestionBtn').disabled = quizAnswers[currentQuestion] === undefined;
+            updateQuizTimer();
+        }
+
+        function updateQuizTimer() {
+            if (!quizStartTime) return;
+            const now = new Date();
+            const diff = Math.floor((now - quizStartTime) / 1000);
+            const minutes = Math.floor(diff / 60).toString().padStart(2, '0');
+            const seconds = (diff % 60).toString().padStart(2, '0');
+            document.getElementById('quizTimer').textContent = `${minutes}:${seconds}`;
+            setTimeout(updateQuizTimer, 1000);
+        }
+
+        document.getElementById('nextQuestionBtn').addEventListener('click', () => {
+            if (currentQuestion < currentBook.quiz.length - 1) {
+                currentQuestion++;
+                showQuestion();
+            } else {
+                showResults();
+            }
+        });
+
+        // Results Page
+        function showResults() {
+            const score = currentBook.quiz.reduce((acc, q, i) => acc + (quizAnswers[i] === q.correct ? 1 : 0), 0);
+            const percentage = ((score / currentBook.quiz.length) * 100).toFixed(2);
+            const grade = percentage >= 90 ? 'A' : percentage >= 80 ? 'B' : percentage >= 70 ? 'C' : percentage >= 60 ? 'D' : 'F';
+            document.getElementById('certificateBookTitle').textContent = currentBook.title;
+            document.getElementById('certificateStudentName').textContent = `${currentUser.firstName} ${currentUser.lastName}`;
+            document.getElementById('certificateBookName').textContent = currentBook.title;
+            document.getElementById('finalScore').textContent = `${score} / ${currentBook.quiz.length}`;
+            document.getElementById('finalPercentage').textContent = `${percentage}%`;
+            document.getElementById('finalGrade').textContent = grade;
+            document.getElementById('completionDate').textContent = new Date().toLocaleDateString();
+            document.getElementById('encouragementMessage').textContent = percentage >= 70 ? 
+                'Congratulations on your outstanding performance! Keep shining!' : 
+                'Great effort! Review your answers and try again to improve!';
+            showPage('resultsPage');
+            updateUserProgress(score, percentage, grade);
+        }
+
+        function updateUserProgress(score, percentage, grade) {
+            const users = JSON.parse(localStorage.getItem('users')) || [];
+            const userIndex = users.findIndex(u => u.username === currentUser.username);
+            if (userIndex !== -1) {
+                users[userIndex].completedBooks.push({
+                    bookId: currentBook.id,
+                    score,
+                    percentage,
+                    grade,
+                    date: new Date().toLocaleDateString()
+                });
+                localStorage.setItem('users', JSON.stringify(users));
+                currentUser = users[userIndex];
+                localStorage.setItem('currentUser', JSON.stringify(currentUser));
+            }
+        }
+
+        // Answer Review Page
+        document.getElementById('reviewAnswersBtn').addEventListener('click', () => {
+            showAnswerReview();
+            showPage('reviewPage');
+        });
+
+        function showAnswerReview() {
+            document.getElementById('reviewBookTitle').textContent = currentBook.title;
+            const answersList = document.getElementById('answersList');
+            answersList.innerHTML = '';
+            currentBook.quiz.forEach((question, index) => {
+                const isCorrect = quizAnswers[index] === question.correct;
+                const answerItem = document.createElement('div');
+                answerItem.className = `answer-item ${isCorrect ? 'correct' : 'incorrect'}`;
+                answerItem.innerHTML = `
+                    <div class="question-number">Question ${index + 1}</div>
+                    <div class="question-text">${question.question}</div>
+                    <div class="answer-options"></div>
+                `;
+                const optionsContainer = answerItem.querySelector('.answer-options');
+                question.options.forEach((opt, optIndex) => {
+                    const isUserAnswer = quizAnswers[index] === optIndex;
+                    const isCorrectAnswer = optIndex === question.correct;
+                    const optionClass = isUserAnswer && isCorrectAnswer ? 'user-correct' : 
+                                      isUserAnswer ? 'user-answer' : 
+                                      isCorrectAnswer ? 'correct-answer' : '';
+                    const indicatorClass = isUserAnswer && isCorrectAnswer ? 'correct-indicator' : 
+                                         isUserAnswer ? 'incorrect-indicator' : 
+                                         isCorrectAnswer ? 'correct-indicator' : 'neutral-indicator';
+                    const optionElement = document.createElement('div');
+                    optionElement.className = `answer-option ${optionClass}`;
+                    optionElement.innerHTML = `
+                        <span class="option-indicator ${indicatorClass}">${String.fromCharCode(65 + optIndex)}</span>
+                        <span>${opt}</span>
+                    `;
+                    optionsContainer.appendChild(optionElement);
+                });
+                answersList.appendChild(answerItem);
+            });
+            const score = currentBook.quiz.reduce((acc, q, i) => acc + (quizAnswers[i] === q.correct ? 1 : 0), 0);
+            const percentage = ((score / currentBook.quiz.length) * 100).toFixed(2);
+            const grade = percentage >= 90 ? 'A' : percentage >= 80 ? 'B' : percentage >= 70 ? 'C' : percentage >= 60 ? 'D' : 'F';
+            document.getElementById('reviewScore').textContent = `${score} / ${currentBook.quiz.length}`;
+            document.getElementById('reviewPercentage').textContent = `${percentage}%`;
+            document.getElementById('reviewGrade').textContent = grade;
+        }
+
+        document.getElementById('backToResultsBtn').addEventListener('click', () => showPage('resultsPage'));
+
+        // Download Certificate
+        document.getElementById('downloadCertificateBtn').addEventListener('click', () => {
+            const { jsPDF } = window.jspdf;
+            const doc = new jsPDF();
+            doc.setFont('helvetica', 'bold');
+            doc.setFontSize(24);
+            doc.text('Certificate of Completion', 105, 30, { align: 'center' });
+            doc.setFontSize(18);
+            doc.text(currentBook.title, 105, 50, { align: 'center' });
+            doc.setFont('helvetica', 'normal');
+            doc.setFontSize(14);
+            doc.text('This certifies that', 105, 80, { align: 'center' });
+            doc.setFont('helvetica', 'bold');
+            doc.setFontSize(20);
+            doc.text(`${currentUser.firstName} ${currentUser.lastName}`, 105, 100, { align: 'center' });
+            doc.setFont('helvetica', 'normal');
+            doc.setFontSize(14);
+            doc.text('has successfully completed the course for', 105, 120, { align: 'center' });
+            doc.setFont('helvetica', 'italic');
+            doc.setFontSize(18);
+            doc.text(currentBook.title, 105, 140, { align: 'center' });
+            doc.setFont('helvetica', 'normal');
+            doc.setFontSize(12);
+            const score = currentBook.quiz.reduce((acc, q, i) => acc + (quizAnswers[i] === q.correct ? 1 : 0), 0);
+            const percentage = ((score / currentBook.quiz.length) * 100).toFixed(2);
+            const grade = percentage >= 90 ? 'A' : percentage >= 80 ? 'B' : percentage >= 70 ? 'C' : percentage >= 60 ? 'D' : 'F';
+            doc.text(`Score: ${score} / ${currentBook.quiz.length}`, 50, 170);
+            doc.text(`Percentage: ${percentage}%`, 50, 180);
+            doc.text(`Grade: ${grade}`, 50, 190);
+            doc.text(`Completion Date: ${new Date().toLocaleDateString()}`, 50, 200);
+            doc.text('Issued by: STAR Learning Management System', 50, 230);
+            doc.text('Instructor: Self-Paced Learning', 50, 240);
+            doc.save(`${currentUser.firstName}_${currentUser.lastName}_${currentBook.title}_Certificate.pdf`);
+        });
+
+        document.getElementById('backToLibraryResults').addEventListener('click', () => showPage('libraryPage'));
+
+        // Search Functionality
+        document.getElementById('searchInput').addEventListener('input', (e) => {
+            const query = e.target.value.toLowerCase();
+            document.querySelectorAll('.book-card').forEach(card => {
+                const title = card.querySelector('h3').textContent.toLowerCase();
+                const section = card.querySelector('p').textContent.toLowerCase();
+                card.style.display = title.includes(query) || section.includes(query) ? 'block' : 'none';
+            });
+        });
+
+        // Initialize
+        if (currentUser) {
+            showPage('libraryPage');
+        } else {
+            showPage('loginPage');
+        }
+        loadBooks();
+    </script>
+</body>
+</html>
