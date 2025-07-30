@@ -127,7 +127,24 @@ class STARLearningSystem {
 
         bookSections.innerHTML = '';
 
-        for (const section of window.LMSData.bookSections) {
+        // Fallback to dummy data if LMSData is not defined
+        const sections = window.LMSData?.bookSections || [
+            {
+                title: "Sample Section",
+                description: "A collection of sample books.",
+                books: [
+                    {
+                        id: "book1",
+                        dataFile: "book1.json",
+                        thumbnail: "placeholder.jpg",
+                        title: "Sample Book 1",
+                        description: "A sample book description."
+                    }
+                ]
+            }
+        ];
+
+        for (const section of sections) {
             const sectionElement = document.createElement('div');
             sectionElement.className = 'book-section';
             
@@ -301,7 +318,7 @@ class STARLearningSystem {
     initializeQuiz() {
         const shuffledQuestions = [...this.currentBook.quizQuestions].sort(() => Math.random() - 0.5);
         this.quizSession = {
-            ...window.LMSData.quizSessionTemplate,
+            ...window.LMSData?.quizSessionTemplate || {},
             bookId: this.currentBook.id,
             bookTitle: this.currentBook.title,
             userName: this.currentUser.fullName || this.currentUser.username,
@@ -386,12 +403,12 @@ class STARLearningSystem {
     }
 
     calculateGrade(score) {
-        for (const [grade, range] of Object.entries(window.LMSData.gradingSystem)) {
+        for (const [grade, range] of Object.entries(window.LMSData?.gradingSystem || {})) {
             if (score >= range.min && score <= range.max) {
                 return { grade, message: range.message };
             }
         }
-        return { grade: 'E', message: window.LMSData.gradingSystem.E.message };
+        return { grade: 'E', message: 'Needs improvement. Keep learning!' };
     }
 
     async finishQuiz() {
@@ -661,6 +678,33 @@ window.downloadPDF = () => starSystem.downloadPDF();
 window.showAnswers = () => starSystem.showAnswers();
 window.retakeQuiz = () => starSystem.retakeQuiz();
 window.backToScorecard = () => starSystem.backToScorecard();
+
+// Dummy LMSData for testing
+window.LMSData = window.LMSData || {
+    bookSections: [
+        {
+            title: "Sample Section",
+            description: "A collection of sample books.",
+            books: [
+                {
+                    id: "book1",
+                    dataFile: "book1.json",
+                    thumbnail: "placeholder.jpg",
+                    title: "Sample Book 1",
+                    description: "A sample book description."
+                }
+            ]
+        }
+    ],
+    quizSessionTemplate: {},
+    gradingSystem: {
+        A: { min: 90, max: 100, message: "Excellent work! Keep it up!" },
+        B: { min: 80, max: 89, message: "Good job! Aim higher next time!" },
+        C: { min: 70, max: 79, message: "Fair effort. Room for improvement." },
+        D: { min: 60, max: 69, message: "Needs more practice." },
+        E: { min: 0, max: 59, message: "Needs improvement. Keep learning!" }
+    }
+};
 
 // Initialize the system when DOM is loaded
 document.addEventListener('DOMContentLoaded', () => {
