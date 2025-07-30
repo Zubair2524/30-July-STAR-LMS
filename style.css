@@ -8,7 +8,7 @@
 :root {
     --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     --secondary-gradient: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
-    --glass-bg: rgba(255, 255, 255, 0.1);
+    --glass-bg: rgba(255, 255, 255, 0.15);
     --glass-border: rgba(255, 255, 255, 0.2);
     --text-primary: #ffffff;
     --text-secondary: rgba(255, 255, 255, 0.8);
@@ -111,7 +111,7 @@ body {
 
 .glass-card {
     background: var(--glass-bg);
-    backdrop-filter: blur(20px);
+    backdrop-filter: blur(10px);
     border: 1px solid var(--glass-border);
     border-radius: 20px;
     padding: 3rem;
@@ -119,6 +119,7 @@ body {
     transition: all 0.3s ease;
     position: relative;
     overflow: hidden;
+    color: var(--text-primary); /* Ensure text visibility */
 }
 
 .glass-card::before {
@@ -206,10 +207,10 @@ body {
 .input-group input {
     width: 100%;
     padding: 1rem;
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.2);
     border: 1px solid var(--glass-border);
     border-radius: 10px;
-    color: var(--text-primary);
+    color: #ffffff; /* White text for visibility */
     font-size: 1rem;
     transition: all 0.3s ease;
 }
@@ -217,7 +218,7 @@ body {
 .input-group input:focus {
     outline: none;
     border-color: #4ecdc4;
-    background: rgba(255, 255, 255, 0.15);
+    background: rgba(255, 255, 255, 0.25);
 }
 
 .input-group input::placeholder {
