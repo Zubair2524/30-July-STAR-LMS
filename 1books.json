@@ -1,0 +1,412 @@
+[
+    {
+        "id": 1,
+        "title": "The Power of Habit",
+        "section": "Personal Development",
+        "thumbnail": "1a.png",
+        "slides": [
+            {
+                "title": "Introduction to Habits",
+                "content": "Habits are automatic behaviors that shape our daily lives. In 'The Power of Habit' by Charles Duhigg, the author explores how habits work and how they can be changed. The book introduces the habit loop: cue, routine, and reward. A cue triggers a behavior, the routine is the behavior itself, and the reward reinforces it. Understanding this loop is key to transforming habits. For example, brushing your teeth daily is a habit formed by a consistent cue (morning routine) and reward (fresh breath). This framework applies to personal and professional growth, making it a powerful tool."
+            },
+            {
+                "title": "The Habit Loop",
+                "content": "The habit loop consists of three components: cue, routine, and reward. The cue is a trigger that prompts the behavior, such as a specific time or emotion. The routine is the action you take, and the reward is the benefit you gain, reinforcing the loop. For instance, stress (cue) might lead to snacking (routine) for comfort (reward). By identifying and altering these components, you can replace bad habits with good ones. Duhigg emphasizes that understanding this cycle allows individuals to consciously shape their behaviors for better outcomes in life and work."
+            },
+            {
+                "title": "Cue Identification",
+                "content": "Identifying cues is the first step to changing habits. Cues can be locations, times, emotional states, other people, or preceding actions. For example, a notification on your phone (cue) may prompt checking social media (routine) for a sense of connection (reward). Duhigg suggests keeping a habit journal to track when and why habits occur. By pinpointing cues, you can interrupt the loop. For instance, turning off notifications can break the cycle of mindless scrolling, allowing you to replace it with a productive routine like reading or exercising."
+            },
+            {
+                "title": "Routine Transformation",
+                "content": "Once cues are identified, the routine can be altered while keeping the reward. For example, if stress triggers snacking, replace snacking with a walk to achieve the same stress relief. Duhigg explains that successful habit change requires maintaining the reward. A real-life example is replacing late-night TV with journaling to relax. The key is experimentation to find routines that deliver the same satisfaction. This approach allows individuals to build sustainable habits that align with their goals, such as improved health, productivity, or mental well-being."
+            },
+            {
+                "title": "Reward Systems",
+                "content": "Rewards are critical to reinforcing habits. They provide the motivation to repeat a routine. Duhigg highlights that rewards can be intrinsic (feeling accomplished) or extrinsic (a treat). For instance, completing a workout (routine) might be rewarded with a smoothie (extrinsic) or a sense of energy (intrinsic). Understanding what reward drives a habit helps in reshaping it. If you crave social interaction, replace gossiping with joining a club. This ensures the new habit sticks by satisfying the same craving in a healthier way."
+            },
+            {
+                "title": "Keystone Habits",
+                "content": "Keystone habits are small changes that create a ripple effect, transforming other areas of life. Duhigg cites exercise as a keystone habit; it often leads to better eating and productivity. For example, starting a daily 10-minute walk can improve discipline, encouraging better time management. These habits act as catalysts, creating a chain reaction of positive behaviors. Identifying and focusing on keystone habits can lead to significant life improvements without overwhelming effort, as they naturally foster other good habits."
+            },
+            {
+                "title": "Organizational Habits",
+                "content": "Habits aren't just personal; organizations have them too. Duhigg discusses how companies like Starbucks instill habits in employees to improve customer service. For example, training baristas to handle stress with specific routines ensures consistent performance. This can apply to any workplace—establishing routines like daily stand-up meetings can enhance team productivity. Understanding organizational habits helps leaders create cultures that drive success. Employees can also adopt these principles to build professional habits, such as regular skill development, to advance their careers."
+            },
+            {
+                "title": "Habit Change Challenges",
+                "content": "Changing habits is challenging due to ingrained neural pathways. Duhigg explains that willpower is like a muscle—it can be strengthened but also fatigued. For instance, trying to change multiple habits at once can overwhelm willpower, leading to failure. A real-life example is someone attempting to diet, exercise, and quit smoking simultaneously, only to relapse. Duhigg suggests focusing on one habit at a time and using small wins to build momentum. This approach makes habit change more manageable and sustainable over time."
+            },
+            {
+                "title": "Social Habits",
+                "content": "Habits are influenced by social groups. Duhigg describes how movements like the Civil Rights Movement leveraged social habits to create change. For example, peer pressure can reinforce positive habits, like joining a study group to improve learning. In a workplace, surrounding yourself with productive colleagues can foster better work habits. Understanding social influences helps individuals choose environments that support their desired habits, such as joining a fitness community to maintain an exercise routine."
+            },
+            {
+                "title": "Sustaining Habits",
+                "content": "Sustaining habits requires consistency and belief in change. Duhigg emphasizes that belief is crucial, especially during setbacks. For example, Alcoholics Anonymous uses belief in a higher power to sustain sobriety. In daily life, believing in your ability to change—like maintaining a budget—helps overcome obstacles. Creating a plan for setbacks, such as a backup routine for missed workouts, ensures long-term success. Duhigg’s insights show that habits are maintained through persistence and a supportive environment."
+            },
+            {
+                "title": "Real-Life Example: Morning Routine",
+                "content": "Consider Sarah, a busy professional struggling with productivity. She identified her morning coffee (cue) led to checking emails (routine) for a sense of control (reward). Using Duhigg’s method, she replaced email checking with 10 minutes of planning her day, keeping the reward. This small change improved her focus, reduced stress, and boosted productivity. By applying the habit loop, Sarah transformed her morning routine, demonstrating how small adjustments can lead to significant improvements in daily life and work efficiency."
+            },
+            {
+                "title": "Real-Life Example: Fitness Journey",
+                "content": "John wanted to get fit but struggled with consistency. His cue was seeing his gym bag, but he often skipped workouts. By applying Duhigg’s principles, he changed his routine to a 15-minute home workout, keeping the reward of feeling healthy. Over time, this keystone habit led to better eating and sleeping habits. John’s story shows how starting small with a keystone habit can create a ripple effect, transforming multiple aspects of life through consistent, intentional changes."
+            },
+            {
+                "title": "Real-Life Example: Workplace Productivity",
+                "content": "A manager, Lisa, noticed her team’s low productivity. Using Duhigg’s organizational habit principles, she introduced a daily 10-minute stand-up meeting (routine) triggered by the workday start (cue) to align goals (reward). This habit improved communication and accountability, boosting team output. Employees felt more engaged, and project deadlines were met consistently. Lisa’s example illustrates how organizational habits can transform workplace dynamics, fostering a culture of efficiency and collaboration through structured routines."
+            }
+        ],
+        "quiz": [
+            {"question": "What is the first component of the habit loop?", "options": ["Routine", "Cue", "Reward", "Belief"], "correct": 1},
+            {"question": "What triggers a habit according to Duhigg?", "options": ["Reward", "Routine", "Cue", "Willpower"], "correct": 2},
+            {"question": "What is the purpose of identifying cues?", "options": ["To change rewards", "To interrupt the habit loop", "To create routines", "To ignore habits"], "correct": 1},
+            {"question": "What should you keep when changing a routine?", "options": ["Cue", "Reward", "Routine", "Belief"], "correct": 1},
+            {"question": "What is a keystone habit?", "options": ["A complex habit", "A small change with big impact", "A social habit", "A routine habit"], "correct": 1},
+            {"question": "How can organizations benefit from habits?", "options": ["By ignoring them", "By creating routines", "By avoiding cues", "By changing rewards"], "correct": 1},
+            {"question": "What makes habit change challenging?", "options": ["Lack of cues", "Strong willpower", "Neural pathways", "Social groups"], "correct": 2},
+            {"question": "What role do social groups play in habits?", "options": ["They have no impact", "They reinforce habits", "They create cues", "They remove rewards"], "correct": 1},
+            {"question": "What is key to sustaining habits?", "options": ["Inconsistency", "Belief", "Rewards", "Cues"], "correct": 1},
+            {"question": "What did Sarah change in her morning routine?", "options": ["Coffee", "Email checking", "Planning", "Both B and C"], "correct": 3},
+            {"question": "What habit did John adopt?", "options": ["Gym workouts", "Home workouts", "Dieting", "Sleeping"], "correct": 1},
+            {"question": "What habit did Lisa introduce?", "options": ["Stand-up meetings", "Email checks", "Team lunches", "Project reviews"], "correct": 0},
+            {"question": "What is the reward in the habit loop?", "options": ["Trigger", "Action", "Benefit", "Cue"], "correct": 2},
+            {"question": "How can willpower be strengthened?", "options": ["By multitasking", "Through small wins", "By avoiding habits", "By ignoring cues"], "correct": 1},
+            {"question": "What example illustrates social habits?", "options": ["Morning routine", "Civil Rights Movement", "Workplace meetings", "Fitness journey"], "correct": 1},
+            {"question": "What helps maintain habits during setbacks?", "options": ["Cues", "Belief", "Routines", "Rewards"], "correct": 1},
+            {"question": "What did Starbucks train baristas to handle?", "options": ["Stress", "Sales", "Coffee making", "Customer complaints"], "correct": 0},
+            {"question": "What is a benefit of keystone habits?", "options": ["Complexity", "Ripple effect", "Isolation", "Inconsistency"], "correct": 1},
+            {"question": "What should you focus on when changing habits?", "options": ["Multiple habits", "One habit at a time", "Rewards only", "Cues only"], "correct": 1},
+            {"question": "What did Duhigg suggest for tracking habits?", "options": ["Habit journal", "Social groups", "Willpower", "Rewards"], "correct": 0}
+        ]
+    },
+    {
+        "id": 2,
+        "title": "Atomic Habits",
+        "section": "Personal Development",
+        "thumbnail": "2a.png",
+        "slides": [
+            {
+                "title": "The Power of Small Changes",
+                "content": "In 'Atomic Habits' by James Clear, the focus is on how small changes lead to remarkable results. Clear argues that tiny adjustments, when consistently applied, compound over time to create significant outcomes. For example, improving by 1% daily can transform your life in a year. This principle applies to habits like studying, exercising, or saving money. The book emphasizes that habits are the compound interest of self-improvement. By focusing on small, manageable changes, individuals can achieve big goals without overwhelming effort, making it a practical guide for personal growth."
+            },
+            {
+                "title": "The 1% Rule",
+                "content": "The 1% rule suggests that small, incremental improvements lead to exponential growth. Clear illustrates this with the example of a plane slightly off course—small corrections make a huge difference. For instance, reading one page daily can lead to finishing multiple books yearly. The key is consistency over intensity. By making habits easy, like doing two push-ups a day, you build momentum. This approach reduces resistance and makes habit formation sustainable, allowing you to achieve long-term goals through small, daily actions."
+            },
+            {
+                "title": "Habit Stacking",
+                "content": "Habit stacking involves pairing a new habit with an existing one to make it stick. Clear suggests using the formula: 'After [current habit], I will [new habit].' For example, 'After brushing my teeth, I will meditate for one minute.' This leverages existing routines to anchor new behaviors. By linking habits, you create a seamless flow, reducing the mental effort needed to start. This technique is effective for building habits like journaling or stretching, ensuring they become part of your daily routine."
+            },
+            {
+                "title": "Make It Obvious",
+                "content": "Clear emphasizes making habits obvious to reduce friction. This involves designing your environment to prompt desired behaviors. For example, placing running shoes by the door encourages exercise. Clear suggests using visual cues, like a habit tracker, to stay on track. Conversely, hide distractions—like keeping your phone in another room—to avoid bad habits. By making good habits visible and bad ones invisible, you create an environment that supports your goals, making success almost automatic."
+            },
+            {
+                "title": "Make It Attractive",
+                "content": "To stick with habits, make them attractive. Clear suggests pairing habits with something you enjoy. For example, listen to a favorite podcast while exercising. This creates positive associations, making the habit more appealing. Temptation bundling, like saving a TV show for workouts, reinforces the behavior. In a workplace, rewarding task completion with a coffee break can make work more enjoyable. By increasing the appeal of habits, you’re more likely to repeat them consistently."
+            },
+            {
+                "title": "Make It Easy",
+                "content": "Simplifying habits reduces resistance. Clear advocates for the two-minute rule: start with a habit that takes two minutes, like writing one sentence or doing one yoga pose. This makes starting effortless, and once you begin, you often continue. For example, instead of aiming for a full workout, commit to putting on gym clothes. By lowering the barrier, you build momentum, making it easier to sustain habits over time, whether it’s learning a skill or eating healthier."
+            },
+            {
+                "title": "Make It Satisfying",
+                "content": "Habits stick when they feel rewarding. Clear suggests immediate rewards to reinforce behaviors, like marking a habit tracker after completing a task. For instance, checking off a workout feels satisfying and motivates repetition. Conversely, make bad habits unsatisfying—Clear suggests accountability partners to discourage procrastination. In a real-life scenario, rewarding yourself with a small treat after studying can reinforce the habit. Satisfaction drives consistency, ensuring habits become part of your identity."
+            },
+            {
+                "title": "Track Your Habits",
+                "content": "Tracking habits provides clarity and motivation. Clear recommends using a habit tracker, like a calendar or app, to log progress. For example, marking an 'X' each day you exercise creates a visual chain you don’t want to break. Tracking also helps identify patterns and obstacles. If you miss a day, Clear advises never missing twice to maintain momentum. This simple tool transforms vague goals into tangible progress, making habits like reading or budgeting more achievable."
+            },
+            {
+                "title": "Identity-Based Habits",
+                "content": "Clear emphasizes building habits by focusing on identity. Instead of aiming to ‘run a marathon,’ aim to ‘be a runner.’ This shifts focus from outcomes to who you want to become. For example, saying ‘I’m a writer’ encourages consistent writing. Small actions reinforce this identity—writing one sentence daily makes you feel like a writer. Over time, these actions compound, aligning your behavior with your desired identity, whether it’s being healthy, organized, or productive."
+            },
+            {
+                "title": "Overcoming Plateaus",
+                "content": "Habits can plateau, but Clear suggests embracing the ‘valley of disappointment.’ Early progress is slow, but persistence pays off. For example, weight loss may stall initially, but consistent effort leads to breakthroughs. Clear advises focusing on systems, not goals—daily routines over one-time wins. If you’re learning a language, daily practice trumps cramming. By staying committed through plateaus, you achieve long-term success, as small habits compound into transformative results over time."
+            },
+            {
+                "title": "Real-Life Example: Studying",
+                "content": "Emma, a student, struggled with studying. Using habit stacking, she paired studying with her morning coffee: ‘After my coffee, I will study for 10 minutes.’ She made it obvious by placing her books on her desk and easy by starting with one page. The reward was checking off her habit tracker, which felt satisfying. Over time, this built a consistent study habit, improving her grades and confidence. Emma’s story shows how small, intentional changes can transform academic performance."
+            },
+            {
+                "title": "Real-Life Example: Fitness",
+                "content": "Mark wanted to exercise regularly but found it daunting. He applied the two-minute rule, starting with two push-ups daily. He made it attractive by listening to music during workouts and tracked progress with a calendar. Over weeks, he increased his routine, becoming someone who ‘exercises daily.’ This identity shift led to better health and energy. Mark’s journey illustrates how starting small and focusing on identity can create lasting fitness habits."
+            },
+            {
+                "title": "Real-Life Example: Workplace Efficiency",
+                "content": "Sarah, a manager, improved her team’s efficiency using habit stacking. She implemented ‘After our morning meeting, we will set daily goals.’ She made it obvious by placing goal sheets in the meeting room and satisfying by celebrating completed goals. This small habit improved team focus and project completion rates. Sarah’s example shows how Clear’s principles can enhance workplace productivity through simple, consistent routines that align with team goals."
+            }
+        ],
+        "quiz": [
+            {"question": "What is the core idea of Atomic Habits?", "options": ["Big changes", "Small changes", "No changes", "Random changes"], "correct": 1},
+            {"question": "What is the 1% rule?", "options": ["Big leaps", "Incremental improvements", "Quick fixes", "Ignoring habits"], "correct": 1},
+            {"question": "What is habit stacking?", "options": ["Removing habits", "Pairing habits", "Tracking habits", "Breaking habits"], "correct": 1},
+            {"question": "How do you make habits obvious?", "options": ["Hide cues", "Design environment", "Avoid routines", "Change rewards"], "correct": 1},
+            {"question": "What is temptation bundling?", "options": ["Avoiding habits", "Pairing with enjoyment", "Tracking progress", "Setting goals"], "correct": 1},
+            {"question": "What is the two-minute rule?", "options": ["Start big", "Start with two minutes", "Avoid habits", "Track habits"], "correct": 1},
+            {"question": "Why make habits satisfying?", "options": ["To discourage them", "To reinforce them", "To ignore them", "To complicate them"], "correct": 1},
+            {"question": "What does tracking habits provide?", "options": ["Confusion", "Clarity", "Distraction", "Failure"], "correct": 1},
+            {"question": "What are identity-based habits?", "options": ["Goal-focused", "Identity-focused", "Reward-focused", "Cue-focused"], "correct": 1},
+            {"question": "How do you overcome plateaus?", "options": ["Give up", "Focus on systems", "Change goals", "Ignore habits"], "correct": 1},
+            {"question": "What did Emma pair studying with?", "options": ["TV", "Coffee", "Exercise", "Music"], "correct": 1},
+            {"question": "What did Mark start with?", "options": ["Marathon", "Two push-ups", "Dieting", "Yoga"], "correct": 1},
+            {"question": "What did Sarah implement?", "options": ["Daily goals", "Team lunches", "Email checks", "Long meetings"], "correct": 0},
+            {"question": "What makes habits stick?", "options": ["Inconsistency", "Rewards", "Complexity", "Avoidance"], "correct": 1},
+            {"question": "What is a habit tracker used for?", "options": ["Logging progress", "Setting goals", "Avoiding habits", "Changing cues"], "correct": 0},
+            {"question": "What is the valley of disappointment?", "options": ["Early progress", "Slow progress", "Big wins", "Failure"], "correct": 1},
+            {"question": "What did Clear suggest for starting habits?", "options": ["Big goals", "Two-minute rule", "Complex routines", "No rewards"], "correct": 1},
+            {"question": "What helps make habits attractive?", "options": ["Distractions", "Temptation bundling", "Hiding cues", "Avoiding rewards"], "correct": 1},
+            {"question": "What did Mark’s habit lead to?", "options": ["Poor health", "Better health", "No change", "Less energy"], "correct": 1},
+            {"question": "What is the benefit of small changes?", "options": ["Quick fixes", "Compound growth", "No results", "Complexity"], "correct": 1}
+        ]
+    },
+    {
+        "id": 3,
+        "title": "Thinking, Fast and Slow",
+        "section": "Psychology",
+        "thumbnail": "3a.png",
+        "slides": [
+            {
+                "title": "Two Systems of Thinking",
+                "content": "In 'Thinking, Fast and Slow,' Daniel Kahneman introduces two systems of thought: System 1 and System 2. System 1 is fast, intuitive, and automatic, handling tasks like recognizing faces or driving. System 2 is slow, deliberate, and effortful, used for complex tasks like solving math problems. For example, answering '2 + 2' uses System 1, while '17 x 24' requires System 2. Understanding these systems helps us recognize when our thinking is biased and how to make better decisions in personal and professional life."
+            },
+            {
+                "title": "System 1: Fast Thinking",
+                "content": "System 1 operates automatically and quickly with little effort. It’s responsible for snap judgments, like dodging a ball or reading emotions. Kahneman explains that System 1 relies on heuristics—mental shortcuts—that can lead to biases. For instance, assuming a loud person is confident is a System 1 judgment that may be wrong. While efficient, System 1 can mislead in complex situations, like financial decisions. Recognizing its limits helps us pause and engage System 2 for more accurate thinking."
+            },
+            {
+                "title": "System 2: Slow Thinking",
+                "content": "System 2 is deliberate and analytical, used for tasks requiring focus, like planning or problem-solving. Kahneman notes it’s lazy, often deferring to System 1’s quick judgments. For example, calculating a budget requires System 2, but we might rely on System 1’s gut feelings instead. Engaging System 2 reduces errors but demands effort. By practicing slow thinking, like double-checking assumptions, we improve decision-making in areas like investments or negotiations, ensuring more rational outcomes."
+            },
+            {
+                "title": "Cognitive Biases",
+                "content": "Kahneman explores cognitive biases that distort thinking. The availability bias, for example, makes us overestimate risks based on recent events—like fearing flying after hearing about a crash. Another is the anchoring effect, where initial information influences decisions, such as judging a product’s value based on its first price. Recognizing these biases helps us question snap judgments. For instance, in hiring, we might overlook a candidate’s skills due to a first impression. Awareness allows better, fairer decisions."
+            },
+            {
+                "title": "Prospect Theory",
+                "content": "Prospect theory explains how people make decisions under risk. Kahneman shows we fear losses more than we value gains. For example, losing $100 feels worse than gaining $100 feels good. This affects choices, like avoiding risks in investments. In daily life, people might stick to a bad job to avoid the ‘loss’ of security. Understanding prospect theory helps us weigh risks rationally, improving decisions in finance, career changes, or even personal relationships."
+            },
+            {
+                "title": "Overconfidence Bias",
+                "content": "Overconfidence bias leads us to overestimate our knowledge or abilities. Kahneman cites examples like doctors misdiagnosing due to confidence in their initial assessment. In business, overconfidence can lead to poor investments. For instance, a manager might assume a project will succeed based on past success, ignoring risks. Recognizing this bias encourages humility and thorough analysis, ensuring better outcomes in decision-making, whether planning a project or personal goals."
+            },
+            {
+                "title": "Framing Effects",
+                "content": "How information is presented—framing—affects decisions. Kahneman shows that a 90% success rate sounds better than a 10% failure rate, though they’re identical. In marketing, framing a product as ‘95% fat-free’ is more appealing than ‘5% fat.’ Understanding framing helps us see through manipulative tactics and make informed choices. For example, in negotiations, reframing a proposal to highlight benefits can sway outcomes. Awareness of framing improves critical thinking in everyday decisions."
+            },
+            {
+                "title": "Sunk Cost Fallacy",
+                "content": "The sunk cost fallacy makes us stick with bad decisions because of past investments. Kahneman explains that continuing a failing project due to time or money spent is irrational. For example, staying in a bad relationship because of years invested is a sunk cost error. Recognizing this fallacy helps us cut losses and focus on future benefits, improving decisions in business, like abandoning a failing product, or in personal life, like changing careers."
+            },
+            {
+                "title": "Happiness and Decision-Making",
+                "content": "Kahneman explores how decisions affect happiness. He distinguishes between the experiencing self (moment-to-moment feelings) and the remembering self (how we recall events). For example, a vacation’s enjoyment (experiencing self) may differ from how we remember it (remembering self). This affects choices, like prioritizing memorable experiences over fleeting pleasures. Understanding this helps us make decisions that align with long-term happiness, such as investing in relationships or meaningful work."
+            },
+            {
+                "title": "Improving Decision-Making",
+                "content": "To improve decisions, Kahneman suggests slowing down and engaging System 2. Techniques include questioning assumptions, seeking diverse perspectives, and using data. For example, before a major purchase, research and compare options rather than relying on gut feelings. In teams, encouraging debate reduces groupthink. By combining System 1’s intuition with System 2’s analysis, we make balanced decisions, whether choosing a career path or managing a project, leading to better outcomes."
+            },
+            {
+                "title": "Real-Life Example: Investment Choices",
+                "content": "Tom, an investor, was swayed by a recent stock market dip (availability bias) and avoided investing. Using Kahneman’s advice, he engaged System 2, researching long-term trends and ignoring short-term fears. He also avoided the sunk cost fallacy by selling a losing stock rather than holding it due to past investments. This led to a diversified portfolio and better returns. Tom’s story shows how overcoming biases improves financial decisions, applicable to budgeting or saving."
+            },
+            {
+                "title": "Real-Life Example: Hiring Decisions",
+                "content": "Lisa, a recruiter, relied on first impressions (System 1) and nearly overlooked a qualified candidate. By using Kahneman’s principles, she implemented a structured interview process (System 2), focusing on skills and data. This reduced biases like anchoring and overconfidence, leading to fairer hires. Her team’s performance improved due to better talent selection. Lisa’s example demonstrates how deliberate thinking enhances workplace decisions, ensuring objectivity in evaluations."
+            },
+            {
+                "title": "Real-Life Example: Personal Choices",
+                "content": "Emma faced a career change but feared losing job security (prospect theory). Influenced by framing, she initially saw the new role as risky. Using Kahneman’s insights, she reframed it as an opportunity for growth and engaged System 2 to analyze benefits. This led to a fulfilling career shift. Emma’s story shows how understanding biases and deliberate thinking can guide major life decisions, like pursuing new opportunities or relationships."
+            }
+        ],
+        "quiz": [
+            {"question": "What are the two systems of thinking?", "options": ["Fast and Slow", "Big and Small", "Quick and Deep", "Auto and Manual"], "correct": 0},
+            {"question": "What is System 1 responsible for?", "options": ["Complex tasks", "Intuitive judgments", "Analytical tasks", "Slow decisions"], "correct": 1},
+            {"question": "What characterizes System 2?", "options": ["Automatic", "Deliberate", "Fast", "Intuitive"], "correct": 1},
+            {"question": "What is the availability bias?", "options": ["Overestimating recent events", "Ignoring risks", "Underestimating gains", "Focusing on losses"], "correct": 0},
+            {"question": "What does prospect theory explain?", "options": ["Habit formation", "Risk decisions", "Social habits", "Fast thinking"], "correct": 1},
+            {"question": "What is overconfidence bias?", "options": ["Underestimating abilities", "Overestimating knowledge", "Ignoring data", "Avoiding decisions"], "correct": 1},
+            {"question": "What is a framing effect?", "options": ["Risk avoidance", "Presentation impact", "Loss aversion", "Quick judgment"], "correct": 1},
+            {"question": "What is the sunk cost fallacy?", "options": ["Sticking to bad decisions", "Avoiding losses", "Seeking gains", "Ignoring past"], "correct": 0},
+            {"question": "What affects happiness in decisions?", "options": ["System 1 only", "Experiencing and remembering selves", "System 2 only", "Biases only"], "correct": 1},
+            {"question": "How can decisions be improved?", "options": ["Rely on System 1", "Engage System 2", "Avoid thinking", "Use biases"], "correct": 1},
+            {"question": "What bias affected Tom’s investments?", "options": ["Sunk cost", "Availability", "Framing", "Overconfidence"], "correct": 1},
+            {"question": "What did Lisa improve?", "options": ["Hiring process", "Investments", "Career change", "Personal choices"], "correct": 0},
+            {"question": "What fear did Emma overcome?", "options": ["Overconfidence", "Loss aversion", "Availability", "Framing"], "correct": 1},
+            {"question": "What does anchoring affect?", "options": ["Initial information", "Final decisions", "Risks", "Rewards"], "correct": 0},
+            {"question": "What is a heuristic?", "options": ["Complex analysis", "Mental shortcut", "Slow thinking", "Data-driven decision"], "correct": 1},
+            {"question": "What did Kahneman suggest for better decisions?", "options": ["Ignore System 2", "Question assumptions", "Rely on intuition", "Avoid data"], "correct": 1},
+            {"question": "What is the experiencing self?", "options": ["Memory of events", "Moment-to-moment feelings", "Future planning", "Past decisions"], "correct": 1},
+            {"question": "What did Lisa use to reduce bias?", "options": ["Gut feelings", "Structured interviews", "First impressions", "Quick judgments"], "correct": 1},
+            {"question": "What does prospect theory emphasize?", "options": ["Gains over losses", "Losses over gains", "Equal value", "No risks"], "correct": 1},
+            {"question": "What helps avoid groupthink?", "options": ["Quick decisions", "Diverse perspectives", "System 1 reliance", "Overconfidence"], "correct": 1}
+        ]
+    },
+    {
+        "id": 4,
+        "title": "Leaders Eat Last",
+        "section": "Leadership",
+        "thumbnail": "4a.png",
+        "slides": [
+            {
+                "title": "The Circle of Safety",
+                "content": "In 'Leaders Eat Last,' Simon Sinek introduces the Circle of Safety, a leadership concept where trust and cooperation thrive. Leaders who prioritize their team’s well-being create a safe environment, reducing stress and boosting performance. For example, a manager who supports employees during tough times fosters loyalty. This contrasts with toxic workplaces where fear stifles innovation. The Circle of Safety encourages collaboration, as employees feel secure to take risks, leading to better outcomes in projects and team dynamics."
+            },
+            {
+                "title": "The Biology of Leadership",
+                "content": "Sinek explains leadership through biology, focusing on chemicals like dopamine, serotonin, oxytocin, and cortisol. Oxytocin fosters trust, as seen when teams bond over shared goals. Serotonin boosts pride in group success, like celebrating a project milestone. Cortisol, linked to stress, can harm performance if leaders create fear. For instance, a supportive boss reduces cortisol, enhancing creativity. Understanding these chemicals helps leaders build environments that promote trust and collaboration, improving workplace morale and productivity."
+            },
+            {
+                "title": "Why Leaders Eat Last",
+                "content": "The title ‘Leaders Eat Last’ comes from a military tradition where leaders prioritize their team’s needs. Sinek argues that great leaders sacrifice personal gain for their people, like ensuring employees have resources before taking perks. For example, a CEO who cuts their bonus to avoid layoffs builds trust. This selflessness inspires loyalty and commitment, creating a culture where employees feel valued and motivated to contribute to organizational goals."
+            },
+            {
+                "title": "Building Trust",
+                "content": "Trust is the foundation of leadership. Sinek emphasizes that trust grows when leaders are consistent, transparent, and empathetic. For instance, admitting mistakes openly builds credibility. In contrast, micromanaging erodes trust, as employees feel undervalued. A real-life example is a manager who listens to team feedback and acts on it, fostering a sense of belonging. Trust enables risk-taking and innovation, as employees feel safe to share ideas, driving organizational success."
+            },
+            {
+                "title": "The Role of Empathy",
+                "content": "Empathy is critical for leadership. Sinek highlights that understanding employees’ challenges builds stronger teams. For example, offering flexible hours for a struggling parent shows care, boosting morale. Empathetic leaders create loyalty, as employees feel seen. This contrasts with leaders who prioritize results over people, leading to burnout. Empathy fosters a culture where employees are motivated to go beyond their roles, enhancing collaboration and productivity in the workplace."
+            },
+            {
+                "title": "The Danger of Abstraction",
+                "content": "Sinek warns about abstraction—losing sight of people behind numbers. Leaders who focus only on metrics, like sales targets, dehumanize their teams. For example, a manager ignoring employee stress to meet quotas risks disengagement. Instead, treating employees as individuals, like recognizing their personal milestones, builds connection. Avoiding abstraction ensures leaders prioritize human needs, fostering a culture of loyalty and sustained performance."
+            },
+            {
+                "title": "Long-Term Vision",
+                "content": "Great leaders focus on long-term vision over short-term gains. Sinek explains that prioritizing quick profits often sacrifices trust and morale. For example, a company investing in employee training rather than cutting costs builds a stronger future. This vision aligns teams toward shared goals, creating resilience. Leaders who communicate a clear ‘why’ inspire employees to work toward a purpose, enhancing commitment and organizational success over time."
+            },
+            {
+                "title": "The Power of Cooperation",
+                "content": "Cooperation drives success in organizations. Sinek argues that leaders who foster teamwork over competition create stronger teams. For instance, a leader encouraging knowledge-sharing among departments boosts innovation. In contrast, internal rivalry can harm morale. A real-life example is a team collaborating on a project, leading to faster problem-solving. Cooperation, supported by the Circle of Safety, ensures employees work together effectively, driving organizational growth."
+            },
+            {
+                "title": "Adapting to Change",
+                "content": "Leaders must adapt to change while maintaining trust. Sinek notes that during uncertainty, like economic shifts, transparent communication is key. For example, a leader explaining layoffs with honesty preserves trust. This contrasts with secrecy, which breeds fear. By involving teams in problem-solving, leaders maintain morale. Adapting with empathy ensures organizations navigate challenges while keeping employees engaged and committed to the mission."
+            },
+            {
+                "title": "Creating a Legacy",
+                "content": "Sinek emphasizes that great leaders create a legacy by empowering others. By mentoring employees and giving them autonomy, leaders build a lasting impact. For example, a manager who trains a successor ensures the team’s success continues. This contrasts with leaders who hoard power, limiting growth. A legacy-focused leader fosters a culture of development, where employees grow into leaders, ensuring long-term organizational success and a positive impact."
+            },
+            {
+                "title": "Real-Life Example: Team Support",
+                "content": "Anna, a team leader, noticed low morale during a tough project. Using Sinek’s Circle of Safety, she held open forums for feedback, reducing stress (cortisol) and building trust (oxytocin). By prioritizing her team’s needs, like flexible deadlines, she boosted collaboration. The team delivered the project successfully, with higher engagement. Anna’s approach shows how empathetic leadership creates a supportive environment, leading to better performance and team cohesion."
+            },
+            {
+                "title": "Real-Life Example: Company Turnaround",
+                "content": "A struggling company, led by CEO Mark, faced layoffs. Instead of focusing on profits, Mark applied Sinek’s principles, transparently sharing challenges and involving employees in solutions. He prioritized training over cuts, building trust. This long-term vision turned the company around, with employees feeling valued and motivated. Mark’s leadership illustrates how empathy and vision can transform an organization, fostering loyalty and sustainable growth."
+            },
+            {
+                "title": "Real-Life Example: Mentorship",
+                "content": "Sarah, a senior manager, mentored a junior employee, John, by giving him leadership opportunities. Using Sinek’s legacy-building approach, she empowered John to lead a project, boosting his confidence and skills. This created a ripple effect, as John mentored others. Sarah’s focus on development strengthened her team’s leadership pipeline, showing how empowering others creates a lasting, positive impact in organizations."
+            }
+        ],
+        "quiz": [
+            {"question": "What is the Circle of Safety?", "options": ["A profit strategy", "A trust environment", "A competition model", "A risk plan"], "correct": 1},
+            {"question": "What chemical fosters trust?", "options": ["Dopamine", "Serotonin", "Oxytocin", "Cortisol"], "correct": 2},
+            {"question": "Why do leaders eat last?", "options": ["To gain power", "To prioritize team", "To avoid work", "To increase profits"], "correct": 1},
+            {"question": "What builds trust in leadership?", "options": ["Micromanaging", "Transparency", "Secrecy", "Competition"], "correct": 1},
+            {"question": "What is the role of empathy?", "options": ["Increase stress", "Build loyalty", "Focus on profits", "Avoid risks"], "correct": 1},
+            {"question": "What is abstraction in leadership?", "options": ["Focusing on people", "Losing sight of people", "Building trust", "Encouraging risk"], "correct": 1},
+            {"question": "What do great leaders prioritize?", "options": ["Short-term gains", "Long-term vision", "Personal gain", "Competition"], "correct": 1},
+            {"question": "What drives organizational success?", "options": ["Competition", "Cooperation", "Fear", "Isolation"], "correct": 1},
+            {"question": "How should leaders handle change?", "options": ["With secrecy", "With transparency", "By avoiding it", "With control"], "correct": 1},
+            {"question": "What creates a leadership legacy?", "options": ["Hoarding power", "Empowering others", "Focusing on profits", "Avoiding risks"], "correct": 1},
+            {"question": "What did Anna prioritize?", "options": ["Profits", "Team support", "Competition", "Secrecy"], "correct": 1},
+            {"question": "What did Mark focus on?", "options": ["Layoffs", "Training", "Profits", "Control"], "correct": 1},
+            {"question": "What did Sarah do for John?", "options": ["Micromanaged", "Mentored", "Ignored", "Competed"], "correct": 1},
+            {"question": "What reduces cortisol?", "options": ["Stressful leadership", "Supportive leadership", "Competition", "Abstraction"], "correct": 1},
+            {"question": "What boosts team morale?", "options": ["Fear", "Empathy", "Control", "Profits"], "correct": 1},
+            {"question": "What is a sign of bad leadership?", "options": ["Transparency", "Micromanaging", "Empathy", "Cooperation"], "correct": 1},
+            {"question": "What inspires loyalty?", "options": ["Selflessness", "Profits", "Fear", "Competition"], "correct": 0},
+            {"question": "What did Sinek emphasize for change?", "options": ["Secrecy", "Communication", "Control", "Avoidance"], "correct": 1},
+            {"question": "What chemical boosts pride?", "options": ["Oxytocin", "Serotonin", "Dopamine", "Cortisol"], "correct": 1},
+            {"question": "What fosters innovation?", "options": ["Fear", "Trust", "Competition", "Abstraction"], "correct": 1}
+        ]
+    },
+    {
+        "id": 5,
+        "title": "The Lean Startup",
+        "section": "Business",
+        "thumbnail": "5a.png",
+        "slides": [
+            {
+                "title": "The Lean Startup Method",
+                "content": "In 'The Lean Startup,' Eric Ries introduces a method for building businesses using rapid experimentation. The core idea is to create a minimum viable product (MVP) to test ideas quickly. For example, a food delivery app might start with a basic website to gauge interest. This approach minimizes waste and maximizes learning. By iterating based on customer feedback, startups can adapt quickly, ensuring they build products people want, saving time and resources."
+            },
+            {
+                "title": "Build-Measure-Learn",
+                "content": "The Build-Measure-Learn loop is the heart of the Lean Startup. Build an MVP, measure its performance with data, and learn from the results. For instance, a clothing brand might test a new design with a small batch before mass production. This loop helps startups validate assumptions quickly. By focusing on actionable metrics, like user engagement, businesses avoid vanity metrics and make informed decisions, ensuring efficient growth and customer satisfaction."
+            },
+            {
+                "title": "Minimum Viable Product",
+                "content": "An MVP is the simplest version of a product that tests a hypothesis. Ries emphasizes launching early to gather feedback. For example, Dropbox started with a video demo to gauge interest before coding. This prevents building unwanted features. An MVP could be a landing page or prototype. By testing small, startups reduce risk and learn what customers value, allowing them to pivot or persevere with confidence."
+            },
+            {
+                "title": "Validated Learning",
+                "content": "Validated learning focuses on testing hypotheses with data. Ries suggests running experiments to confirm what customers want. For example, a coffee shop might test a new flavor by offering samples and tracking sales. This data-driven approach ensures decisions are based on evidence, not assumptions. Validated learning helps startups avoid costly mistakes, like building a product no one buys, and fosters a culture of continuous improvement."
+            },
+            {
+                "title": "Pivoting",
+                "content": "Pivoting is changing direction when an idea isn’t working. Ries describes types like zoom-in pivots (focusing on one feature) or customer segment pivots. For example, a company targeting teens might pivot to adults if feedback shows demand. Pivoting requires humility to admit failure and adapt. This flexibility ensures startups stay relevant, avoiding the trap of sticking to a failing plan, and drives long-term success."
+            },
+            {
+                "title": "Innovation Accounting",
+                "content": "Innovation accounting measures progress in startups where traditional metrics fail. Ries suggests tracking actionable metrics, like user retention, over vanity metrics, like total downloads. For example, a fitness app might focus on daily active users rather than app installs. This helps startups gauge true progress and make data-driven decisions. Innovation accounting ensures resources are used effectively, aligning efforts with customer needs and business goals."
+            },
+            {
+                "title": "Continuous Deployment",
+                "content": "Continuous deployment involves releasing updates frequently to test and improve products. Ries cites tech companies that deploy code multiple times daily. For example, a website might test a new feature with 10% of users. This allows rapid feedback and iteration. In non-tech settings, like a bakery testing new recipes weekly, continuous deployment ensures constant improvement, keeping businesses agile and responsive to customer preferences."
+            },
+            {
+                "title": "Customer Feedback",
+                "content": "Customer feedback is critical for lean startups. Ries emphasizes engaging users early to understand their needs. For example, a software startup might use surveys or interviews to refine features. Listening to customers prevents building irrelevant products. In a retail setting, asking shoppers about preferences can shape inventory. This feedback loop ensures startups create value, fostering loyalty and driving sustainable growth."
+            },
+            {
+                "title": "Lean Thinking",
+                "content": "Lean thinking, inspired by lean manufacturing, focuses on eliminating waste. Ries applies this to startups by avoiding overbuilding. For example, a game developer might release a basic version to test mechanics before adding graphics. This ensures resources are used efficiently. Lean thinking encourages experimentation and learning, allowing startups to adapt quickly and build products that meet market demands without unnecessary costs."
+            },
+            {
+                "title": "Scaling Lean",
+                "content": "Scaling lean principles ensures growth without losing agility. Ries suggests maintaining the Build-Measure-Learn loop even as companies grow. For example, a large retailer might test new products in select stores before a full rollout. This keeps the focus on learning and adaptation. Scaling lean ensures businesses stay customer-focused, avoiding bureaucracy and maintaining the startup mindset as they expand."
+            },
+            {
+                "title": "Real-Life Example: App Launch",
+                "content": "A startup, FitApp, wanted to launch a fitness app. Using Ries’ MVP approach, they created a simple workout tracker and tested it with 100 users. Feedback showed users wanted meal plans. They pivoted, adding nutrition features, and used validated learning to confirm demand. This led to a successful app with high retention. FitApp’s story shows how MVPs and feedback drive product-market fit, saving time and resources."
+            },
+            {
+                "title": "Real-Life Example: Retail Pivot",
+                "content": "A clothing store, Trendy, targeted young adults but saw low sales. Using the Lean Startup method, they tested an MVP—a pop-up shop for professionals. Sales data (validated learning) showed higher demand, so they pivoted to this segment. Continuous deployment of new styles kept customers engaged. Trendy’s pivot illustrates how data-driven decisions and flexibility can transform a struggling business into a thriving one."
+            },
+            {
+                "title": "Real-Life Example: Food Business",
+                "content": "A bakery, SweetRise, wanted to introduce a new dessert. They used an MVP, offering samples at a local market, and measured feedback (Build-Measure-Learn). Customers loved the flavor but wanted smaller sizes. SweetRise adjusted, launching mini desserts, which boosted sales. This example shows how lean principles, like customer feedback and rapid iteration, ensure products meet market needs effectively."
+            }
+        ],
+        "quiz": [
+            {"question": "What is the Lean Startup method?", "options": ["Slow development", "Rapid experimentation", "Big launches", "No testing"], "correct": 1},
+            {"question": "What is the Build-Measure-Learn loop?", "options": ["Plan-Execute-Review", "Build-Measure-Learn", "Test-Launch-Grow", "Design-Build-Sell"], "correct": 1},
+            {"question": "What is an MVP?", "options": ["Maximum Viable Product", "Minimum Viable Product", "Main Value Product", "Most Valuable Product"], "correct": 1},
+            {"question": "What is validated learning?", "options": ["Guessing", "Testing hypotheses", "Ignoring data", "Building fast"], "correct": 1},
+            {"question": "What is a pivot?", "options": ["Sticking to a plan", "Changing direction", "Increasing budget", "Avoiding feedback"], "correct": 1},
+            {"question": "What does innovation accounting track?", "options": ["Vanity metrics", "Actionable metrics", "Sales only", "No metrics"], "correct": 1},
+            {"question": "What is continuous deployment?", "options": ["Rare updates", "Frequent releases", "No testing", "Big launches"], "correct": 1},
+            {"question": "Why is customer feedback critical?", "options": ["To ignore needs", "To understand needs", "To increase costs", "To avoid testing"], "correct": 1},
+            {"question": "What is lean thinking?", "options": ["Overbuilding", "Eliminating waste", "Slow growth", "Ignoring customers"], "correct": 1},
+            {"question": "How do lean startups scale?", "options": ["With bureaucracy", "With agility", "With big launches", "With no feedback"], "correct": 1},
+            {"question": "What did FitApp test?", "options": ["Full app", "Workout tracker", "Game app", "Social platform"], "correct": 1},
+            {"question": "What did Trendy pivot to?", "options": ["Teens", "Professionals", "Kids", "Seniors"], "correct": 1},
+            {"question": "What did SweetRise adjust?", "options": ["Flavors", "Sizes", "Prices", "Locations"], "correct": 1},
+            {"question": "What does an MVP reduce?", "options": ["Feedback", "Risk", "Sales", "Learning"], "correct": 1},
+            {"question": "What metrics should startups avoid?", "options": ["Actionable", "Vanity", "Retention", "Engagement"], "correct": 1},
+            {"question": "What helps startups adapt?", "options": ["Pivoting", "Sticking to plans", "Ignoring feedback", "Big budgets"], "correct": 0},
+            {"question": "What did Dropbox use as an MVP?", "options": ["Full software", "Video demo", "Website", "App"], "correct": 1},
+            {"question": "What ensures customer satisfaction?", "options": ["No feedback", "Build-Measure-Learn", "Big launches", "Vanity metrics"], "correct": 1},
+            {"question": "What did SweetRise use at a market?", "options": ["Full menu", "Samples", "Ads", "Surveys"], "correct": 1},
+            {"question": "What drives lean startup success?", "options": ["Overbuilding", "Customer feedback", "No testing", "Slow growth"], "correct": 1}
+        ]
+    }
+]
