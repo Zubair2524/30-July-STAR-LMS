@@ -4,209 +4,309 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>STAR Learning Management System</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 </head>
 <body>
-    <!-- Loading Screen -->
-    <div id="loading-screen" class="loading-screen">
-        <div class="loader">
-            <div class="book">
-                <div class="page"></div>
-                <div class="page"></div>
-                <div class="page"></div>
-            </div>
-        </div>
-        <p>Loading STAR Portal...</p>
-    </div>
-
-    <!-- Login Page -->
-    <div class="page" id="login-page">
+    <!-- Registration Section -->
+    <div id="registration" class="section active">
         <div class="container">
-            <div class="glass-card login-card">
-                <div class="logo-section">
-                    <div class="logo-placeholder"></div>
-                    <h2 class="main-title">STAR</h2>
-                    <p class="subtitle">Shaigan's Books Learning Management Portal</p>
+            <div class="glass-card">
+                <div class="header">
+                    <div class="logo">
+                        <div class="star-icon">⭐</div>
+                        <h1>STAR LMS</h1>
+                    </div>
+                    <p class="subtitle">Self-Transformation And Realization Learning Management System</p>
                 </div>
-                <form class="login-form">
-                    <div class="input-group">
-                        <input type="text" id="login-username" placeholder="Username" required>
-                        <div class="input-highlight"></div>
+                
+                <form id="userForm" class="form">
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" required>
                     </div>
-                    <div class="input-group">
-                        <input type="password" id="login-password" placeholder="Password" required>
-                        <div class="input-highlight"></div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" required>
                     </div>
-                    <button type="submit" class="rainbow-btn">Enter Portal</button>
+                    
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="organization">Organization</label>
+                        <input type="text" id="organization" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="designation">Designation</label>
+                        <input type="text" id="designation" required>
+                    </div>
+                    
+                    <button type="submit" class="btn-primary">Start Learning Journey</button>
                 </form>
-                <div class="register-link">New user? <span onclick="showRegistration()">Register here</span></div>
             </div>
         </div>
     </div>
 
-    <!-- Registration Page -->
-    <div class="page" id="registration-page">
+    <!-- Dashboard Section -->
+    <div id="dashboard" class="section">
         <div class="container">
-            <div class="glass-card registration-card">
-                <h2>Join STAR Learning Portal</h2>
-                <form class="registration-form">
-                    <div class="form-row">
-                        <div class="input-group">
-                            <input type="text" id="fullName" placeholder="Full Name" required>
-                            <div class="input-highlight"></div>
-                        </div>
-                        <div class="input-group">
-                            <input type="text" id="designation" placeholder="Designation" required>
-                            <div class="input-highlight"></div>
-                        </div>
-                    </div>
-                    <div class="form-row">
-                        <div class="input-group">
-                            <input type="text" id="teamDepartment" placeholder="Team/Department" required>
-                            <div class="input-highlight"></div>
-                        </div>
-                        <div class="input-group">
-                            <input type="text" id="baseCity" placeholder="Base City" required>
-                            <div class="input-highlight"></div>
-                        </div>
-                    </div>
-                    <div class="form-row">
-                        <div class="input-group">
-                            <input type="date" id="registrationDate" required>
-                            <div class="input-highlight"></div>
-                        </div>
-                        <div class="input-group">
-                            <input type="email" id="email" placeholder="Email" required>
-                            <div class="input-highlight"></div>
-                        </div>
-                    </div>
-                    <div class="form-row">
-                        <div class="input-group">
-                            <input type="tel" id="cellNumber" placeholder="Cell Number" required>
-                            <div class="input-highlight"></div>
-                        </div>
-                        <div class="input-group">
-                            <input type="text" id="reg-username" placeholder="Username" required>
-                            <div class="input-highlight"></div>
-                        </div>
-                    </div>
-                    <div class="input-group">
-                        <input type="password" id="reg-password" placeholder="Password" required>
-                        <div class="input-highlight"></div>
-                    </div>
-                    <button type="submit" class="rainbow-btn">Complete Registration</button>
-                </form>
-                <div class="back-link" onclick="showLogin()">← Back to Login</div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Library Page -->
-    <div class="page" id="library-page">
-        <div class="library-header">
-            <div class="header-content">
-                <div class="logo-section">
-                    <div class="logo-placeholder"></div>
-                    <h1>STAR Library</h1>
+            <div class="header">
+                <div class="logo">
+                    <div class="star-icon">⭐</div>
+                    <h1>STAR LMS</h1>
                 </div>
                 <div class="user-info">
-                    <span id="user-name">Welcome, </span>
-                    <button class="logout-btn" onclick="logout()">Logout</button>
+                    <span id="welcomeUser"></span>
                 </div>
             </div>
-            <div class="search-section">
-                <div class="search-bar">
-                    <input type="text" id="search-input" placeholder="Search books...">
-                    <button class="search-btn">🔍</button>
+            
+            <div class="books-grid">
+                <div class="book-card" data-book="think-grow-rich">
+                    <div class="book-cover">
+                        <h3>Think and Grow Rich</h3>
+                        <p class="author">by Napoleon Hill</p>
+                    </div>
+                    <div class="book-stats">
+                        <div class="stat">
+                            <span class="stat-icon">📖</span>
+                            <span>13 Slides</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-icon">⏱️</span>
+                            <span>15 min read</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-icon">❓</span>
+                            <span>10 Questions</span>
+                        </div>
+                    </div>
+                    <button class="btn-secondary">Start Reading</button>
+                </div>
+                
+                <div class="book-card" data-book="7-habits">
+                    <div class="book-cover">
+                        <h3>The 7 Habits of Highly Effective People</h3>
+                        <p class="author">by Stephen R. Covey</p>
+                    </div>
+                    <div class="book-stats">
+                        <div class="stat">
+                            <span class="stat-icon">📖</span>
+                            <span>12 Slides</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-icon">⏱️</span>
+                            <span>18 min read</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-icon">❓</span>
+                            <span>10 Questions</span>
+                        </div>
+                    </div>
+                    <button class="btn-secondary">Start Reading</button>
+                </div>
+                
+                <div class="book-card" data-book="win-friends">
+                    <div class="book-cover">
+                        <h3>How to Win Friends and Influence People</h3>
+                        <p class="author">by Dale Carnegie</p>
+                    </div>
+                    <div class="book-stats">
+                        <div class="stat">
+                            <span class="stat-icon">📖</span>
+                            <span>13 Slides</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-icon">⏱️</span>
+                            <span>20 min read</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-icon">❓</span>
+                            <span>10 Questions</span>
+                        </div>
+                    </div>
+                    <button class="btn-secondary">Start Reading</button>
+                </div>
+                
+                <div class="book-card" data-book="atomic-habits">
+                    <div class="book-cover">
+                        <h3>Atomic Habits</h3>
+                        <p class="author">by James Clear</p>
+                    </div>
+                    <div class="book-stats">
+                        <div class="stat">
+                            <span class="stat-icon">📖</span>
+                            <span>12 Slides</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-icon">⏱️</span>
+                            <span>16 min read</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-icon">❓</span>
+                            <span>10 Questions</span>
+                        </div>
+                    </div>
+                    <button class="btn-secondary">Start Reading</button>
+                </div>
+                
+                <div class="book-card" data-book="power-of-now">
+                    <div class="book-cover">
+                        <h3>The Power of Now</h3>
+                        <p class="author">by Eckhart Tolle</p>
+                    </div>
+                    <div class="book-stats">
+                        <div class="stat">
+                            <span class="stat-icon">📖</span>
+                            <span>12 Slides</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-icon">⏱️</span>
+                            <span>14 min read</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-icon">❓</span>
+                            <span>10 Questions</span>
+                        </div>
+                    </div>
+                    <button class="btn-secondary">Start Reading</button>
                 </div>
             </div>
-        </div>
-        <div class="library-content">
-            <div id="book-sections"></div>
         </div>
     </div>
 
-    <!-- Reader Page -->
-    <div class="page" id="reader-page">
-        <div class="reader-header">
-            <div class="header-content">
-                <div class="reading-info">
-                    <span id="reading-timer">00:00</span>
-                    <span id="slide-counter">1 / 10</span>
-                </div>
-                <div class="logo-section">
-                    <h1 id="book-title">Book Title</h1>
-                </div>
-            </div>
-        </div>
-        <div class="reader-content">
-            <div id="current-slide" class="slide-container"></div>
-            <div class="reader-controls">
-                <button class="control-btn" onclick="goToFirstSlide()">⏮️</button>
-                <button class="control-btn" onclick="previousSlide()">⏪</button>
-                <button class="control-btn home-btn" onclick="goHome()">🏠</button>
-                <button class="control-btn" onclick="nextSlide()">⏩</button>
-                <button class="control-btn" onclick="goToLastSlide()">⏭️</button>
-            </div>
-        </div>
-    </div>
-
-    <!-- Quiz Page -->
-    <div class="page" id="quiz-page">
-        <div class="quiz-header">
-            <div class="header-content">
-                <div class="quiz-info">
-                    <span id="quiz-timer">00:00</span>
-                    <span id="question-counter">1 / 20</span>
-                    <span id="quiz-score">Score: 0/100</span>
-                </div>
-                <div class="logo-section">
-                    <h1 id="quiz-book-title">Quiz: Book Title</h1>
-                </div>
-            </div>
-        </div>
-        <div class="quiz-content">
-            <div id="current-question" class="question-container"></div>
-            <div class="quiz-controls">
-                <button class="control-btn" id="prev-question-btn" onclick="previousQuestion()">⏪ Previous</button>
-                <button class="control-btn" id="next-question-btn" onclick="nextQuestion()">Next ⏩</button>
-                <button class="control-btn" id="finish-quiz-btn" style="display: none;" onclick="finishQuiz()">Finish Quiz</button>
-            </div>
-        </div>
-    </div>
-
-    <!-- Scorecard Page -->
-    <div class="page" id="scorecard-page">
+    <!-- Reading Section -->
+    <div id="reading" class="section">
         <div class="container">
-            <div class="glass-card scorecard">
-                <div class="certificate-header">
-                    <div class="logo-placeholder"></div>
-                    <h2>STAR Learning Certificate</h2>
-                    <p>Shaigan's Books Learning Management Portal</p>
+            <div class="reading-header">
+                <button id="backToDashboard" class="btn-back">← Back to Dashboard</button>
+                <div class="progress-container">
+                    <div class="progress-bar">
+                        <div id="progressFill" class="progress-fill"></div>
+                    </div>
+                    <span id="progressText">1 / 10</span>
                 </div>
-                <div id="scorecard-content" class="scorecard-content"></div>
-                <div class="scorecard-actions">
-                    <button class="rainbow-btn" onclick="downloadPDF()">📄 Download PDF</button>
-                    <button class="control-btn" onclick="showAnswers()">📝 Check Answers</button>
-                    <button class="control-btn" onclick="retakeQuiz()">🔄 New Quiz</button>
-                    <button class="control-btn home-btn" onclick="goHome()">🏠 Home</button>
+            </div>
+            
+            <div class="slide-container">
+                <div id="slideContent" class="slide-content"></div>
+                
+                <div class="slide-navigation">
+                    <button id="prevSlide" class="btn-nav" disabled>Previous</button>
+                    <button id="nextSlide" class="btn-nav">Next</button>
+                    <button id="startQuiz" class="btn-primary" style="display: none;">Start Quiz</button>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- Answers Review Page -->
-    <div class="page" id="answers-page">
+    <!-- Quiz Section -->
+    <div id="quiz" class="section">
         <div class="container">
-            <div class="glass-card answers-review">
+            <div class="quiz-header">
+                <h2 id="quizTitle">Quiz</h2>
+                <div class="quiz-progress">
+                    <span id="questionNumber">Question 1 of 10</span>
+                    <div class="timer">
+                        <span class="timer-icon">⏱️</span>
+                        <span id="timer">15:00</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="quiz-container">
+                <div id="questionContent" class="question-content"></div>
+                
+                <div class="quiz-navigation">
+                    <button id="prevQuestion" class="btn-nav" disabled>Previous</button>
+                    <button id="nextQuestion" class="btn-nav">Next</button>
+                    <button id="submitQuiz" class="btn-primary" style="display: none;">Submit Quiz</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Results Section -->
+    <div id="results" class="section">
+        <div class="container">
+            <div class="results-container">
+                <div class="score-card">
+                    <div class="score-header">
+                        <div class="achievement-icon">🏆</div>
+                        <h2>Quiz Completed!</h2>
+                        <div id="gradeDisplay" class="grade"></div>
+                    </div>
+                    
+                    <div class="score-details">
+                        <div class="score-item">
+                            <span class="score-label">Score:</span>
+                            <span id="finalScore" class="score-value">0/10</span>
+                        </div>
+                        <div class="score-item">
+                            <span class="score-label">Percentage:</span>
+                            <span id="percentage" class="score-value">0%</span>
+                        </div>
+                        <div class="score-item">
+                            <span class="score-label">Reading Time:</span>
+                            <span id="readingTime" class="score-value">0 min</span>
+                        </div>
+                        <div class="score-item">
+                            <span class="score-label">Quiz Time:</span>
+                            <span id="quizTime" class="score-value">0 min</span>
+                        </div>
+                    </div>
+                    
+                    <div class="user-details">
+                        <h3>Participant Details</h3>
+                        <div class="detail-item">
+                            <span class="detail-icon">👤</span>
+                            <span id="resultName"></span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-icon">📧</span>
+                            <span id="resultEmail"></span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-icon">📱</span>
+                            <span id="resultPhone"></span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-icon">🏢</span>
+                            <span id="resultOrganization"></span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-icon">💼</span>
+                            <span id="resultDesignation"></span>
+                        </div>
+                    </div>
+                    
+                    <div class="action-buttons">
+                        <button id="checkAnswers" class="btn-secondary">Check Answers</button>
+                        <button id="downloadPDF" class="btn-primary">Download Certificate</button>
+                        <button id="backToDashboardFromResults" class="btn-nav">Back to Dashboard</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Answer Review Section -->
+    <div id="answerReview" class="section">
+        <div class="container">
+            <div class="review-header">
+                <button id="backToResults" class="btn-back">← Back to Results</button>
                 <h2>Answer Review</h2>
-                <div id="answers-content"></div>
-                <div class="back-link" onclick="backToScorecard()">← Back to Score Card</div>
             </div>
+            
+            <div id="reviewContent" class="review-content"></div>
         </div>
     </div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
-    <script src="main.js"></script>
+    <script src="data.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
